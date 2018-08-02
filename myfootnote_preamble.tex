@@ -1,0 +1,35 @@
+% from http://tex.stackexchange.com/questions/78221/changing-footnote-symbols
+
+\makeatletter
+\newcommand*{\myfnsymbolsingle}[1]{%
+	\ensuremath{%
+		\ifcase#1% 0
+			\or % 1
+			*%   
+			\or % 2
+			\dagger
+			\or % 3  
+			\ddagger
+			\or % 4   
+			\mathsection
+			\or % 5
+			\mathparagraph
+			\else % >= 6
+			\@ctrerr  
+			\fi
+	}%   
+}   
+\makeatother
+
+\newcommand*{\myfnsymbol}[1]{%
+	\myfnsymbolsingle{\value{#1}}%
+}
+
+% remove upper boundary by multiplying the symbols if needed
+\usepackage{alphalph}
+\newalphalph{\myfnsymbolmult}[mult]{\myfnsymbolsingle}{}
+
+\renewcommand*{\thefootnote}{%
+	\myfnsymbolmult{\value{footnote}}%
+}
+
