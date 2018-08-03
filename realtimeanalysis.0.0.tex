@@ -1,0 +1,7 @@
+
+Data handling is a key challenge for which we plan to use a FPGA-based machine learning inferencing.
+The inference model will be trained based on a transfer learning paradigm whereby the central hidden layers, e.g. the simulation trained core layers, will be optimized to recover x-ray pulse shapes (ground truth) given simulated angular streaking results.
+The next step of the model training then adds a thin surface set of layers at the input side that is connected to the raw data of the detector.
+Also, we will connect via a similarly thin set of layers that connect the preliminary output to the now data-based pulse reconstructions.
+We expect that such an architecture will preserve the physics of angular streaking as contained in the simulations, while also incorporating the raw sensor calibrations as well as adjusting to any remaining systematic errors in the retrieval interpretation.
+

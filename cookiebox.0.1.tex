@@ -51,7 +51,7 @@
 
 \graphicspath{{./figs/}}
 
-\title{Enabling long wavelength streaking for attosecond science with an array of next generation electron Time-of-Flight spectrometers}
+\title{Enabling long wavelength streaking for attosecond x-ray science.}
 \author{
 PI Ryan Coffee, Senior Staff Scientist\\
 LCLS Science Research and Development \& The PULSE Institute,\\
@@ -71,12 +71,16 @@ DOE National Laboratory Announcement Number: \textbf{FWP\#100498}\\
 
 %\thispagestyle{empty}
 \pagestyle{fancy}
-\lhead{Enabling long wavelength streaking for attosecond science\ldots}
+\lhead{Enabling long wavelength streaking for attosecond x-ray science}
+%\lhead{Next generation electron spectrometers for attosecond XFEL science}
+%\lhead{Next generation spectrometer array for attosecond XFEL science}
 \rhead{Ryan N.~Coffee}
 
 %\clearpage
 \section*{Project Summary}
 \input{active.project_summary.tex}
+
+\end{document}
 
 
 \pagebreak
@@ -86,57 +90,22 @@ DOE National Laboratory Announcement Number: \textbf{FWP\#100498}\\
 
 \noindent{\Large \textbf{Project Narrative}}\\
 
-\end{document}
-
-HERE HERE HERE HERE
 
 \section*{Introduction}
 
-The advent of x-ray free electron lasers (xFELs) has brought the ability to resolve ultrafast processes in molecular and material systems on their natural time and length scales \cite{Fritz2007,Katayama2013,Mariano2013,McFarland2014}.
-Given the MHz scale repetition rate of Table~\ref{lcls2specs} for the coming facility upgrade --- the Linac Coherent Light Source II (LCLS-II) --- such a measure-and-sort method would effectively require every shot be recorded, increasing the data load from the 10 TB/day of today to 100 PB/day.
-Such a load would require an enormous cost for developing the ultra-high duty-cycle area detectors and the corresponding network and storage infrastructure. 
+\input{active.introduction.tex}
 
-USE FIGURE FROM CEDERBAUM \cite{Cederbaum2008}
-
-\begin{wraptable}[14]{r}{.45\linewidth}
-\vspace{-1.5\baselineskip}
-\caption{Soft x-ray conditions for LCLS-I and the high-repetition rate LCLS-II. \cite{lcls2_opportunities}}\label{lcls2specs}
-\begin{tabular}{lcr}
-\toprule
-Parameter & LCLS-I &LCLS-II\\
-\midrule
-Max rep.~rate & 120 Hz & 930 kHz\\
-Average power & 0.5 W & 200 W\\ 
-Pulse energy & 4 mJ & 0.1--5\footnotemark[1] mJ\\
-\shortstack{Photon energy\\\mbox{}range} & 0.25--2 keV & 0.2--5 keV\\
-\shortstack{Bunch arrival\\\mbox{ } time stability} & 100 fs rms& 20 fs rms\\
-\toprule
-\end{tabular}\\
-\footnotemark[1] $\geq$ 200 $\mu$J only at reduced repetition rate, conserving 200 W maximum average power.
-\end{wraptable}
-Many attosecond scale experiments, currently only enabled by high-harmonic generation (HHG)\cite{Lewenstein1994,Hentschel2001,Chen2014,Schmidt2016}, would greatly benefit from the much higher brightness of an attosecond xFEL beamline \cite{Ding2009,Xiang2009}.
-This would effectively exchange the flux challenge of HHG sources for the challenge of synchronizing optical and xFEL pulses with 100 attosecond precision.
-Helium buffer gas with 20eV photoelectrons into grounded detectors will enable angular streaking simultaneously of EUV attosecond pulses with x-ray attosecond pulses in the identical scheme as the x-ray atto pairs.
-
-Achieving the full capability of x-ray laser science will require the control of the x-ray spectral phase.
-The development of temporally shaped x-ray FEL pulses would not only facilitate attosecond pulse generation but also a number of multi-pulse non-linear techniques.
-A continued progress on this front \cite{Lutman13_twocolor,Marinelli13_twocolor,Allaria2014,Marinelli2015,Prince2016,Lutman2016,Marinelli2016} will require full spectral phase, amplitude and polarization characterization. 
-We therefore propose a single-shot diagnostic that reports the full temporal intensity, wavelength, and polarization distributions with $\sim$150 attoseconds resolution at the highest repetition rates, limited only by the optical laser repetition rate that is used for the streaking drive laser.
-
-We restrict ourselves to two fundamental objectives:
-\begin{enumerate}
-\item \label{obj::streaking} Developing a single-shot diagnostic that reports the full temporal intensity, wavelength, and polarization distribution also with $\sim$150 attoseconds resolution at the highest laser repetition rate up to 1MHz.  
-The pulse retrieval will allow reconstruction of even two-color x-ray pulses where the color separation can be even hundreds of eV separated, in order to allow for multi-element resonant experiments.
-\item \label{obj::euv-xray} Extending the x-ray/optical cross-correlation technique to allow for single-shot sorting of the residual jitter to a resolution of $\sim$100 attoseconds at a $\geq$10 kHz repetition rate.
-\item \label{obj::ml} We will develop the algorithms used to recover the x-ray pulse structure, including the the use of so-called EdgeML whereby the machine learning inference models are loaded onto FPGA chips for accelerated pulse reconstruction based on inference matrices.
-\end{enumerate}
 
 
 
 \section*{Objective \ref{obj::streaking} -- Streaking}
 \section*{Objective \ref{obj::euv-xray} -- euv-xray}
-\section*{Objective \ref{obj::ml} -- ml}
+\input{active.euvxray.tex}
 
+Above 50 eV attosecond pulses we will be able to directly measure both x-ray and EUV attosecond pulses with the cookiebox.
+
+
+\begin{comment}
 \section*{Budget \ref{sec::budget} -- budget}
 year 1
 \begin{enumerate}
@@ -158,6 +127,7 @@ year 2
 \item FPGA for streaming analysis Virtex at 7k  
 \item Miscellaneous vacuum and electronics M&S (14k)
 \end{enumerate}
+\end{comment}
 
 %
 %\begin{wrapfigure}[20]{r}{0.5\linewidth}
@@ -176,11 +146,14 @@ year 2
 %\end{wrapfigure}
 
 
-Data handling is a key challenge for requirement \ref{1disealgo} for which we plan to use a programmable region of interest (ROI) enabled CMOS area detector \cite{cmosROI} to read out the cross-polarized spectrum.
+\section*{Objective \ref{obj::real_time_analysis} -- Real time analysis}
+\imput{active.realtimeanalysis.tex}
+
+
+programmable region of interest (ROI) enabled CMOS area detector \cite{cmosROI} to read out the cross-polarized spectrum.
 High speed optical CMOS detectors should allow well above 100 kHz duty-cycle for a 1\% ROI readout \cite{cmosspeed} to be available for FPGA-based algorithms so that data analysis can occur prior to transfer.
 It is the transfer of the 1\% linear ROI and subsequent on-board processing that limits the repetition rate of such a measurement since only the arrival time and quality of measurement need to be transferred to the recording nodes and to the optical laser synchronization system.
 Only very small data must be transferred over the network to remote data recording nodes.
-We favor a two-dimensional CMOS detector in order to build the technology around the same detector hardware and optical beam geometries for both the one-dimensional and two-dimensional versions of the interferometric spectral encoding (Objective~\ref{obj::sorting}).
 
 For the sake of LCLS-II commissioning in 2019, we will push for a repetition rate that extends beyond the control band of the laser oscillator (requirement~\ref{1disealgo}).
 A direct measurement of the temporal jitter power spectrum will aid the implementation of synchronization control systems.
@@ -188,7 +161,6 @@ Furthermore, the tight causal connection between electron bunch and x-ray pulse 
 
 
 
-Attosecond level synchronization is an important extension to interferometric spectral encoding at LCLS-II.
 One of the biggest challenges for the attosecond science community today is the difficulty in producing significant pulse energy in the 200 eV -- 2 keV regime using high harmonic generation (HHG)\cite{Chen2014,Schmidt2016}.
 Given the importance of understanding exciton flow in photo-excited systems, one can foresee the desire to optically drive electrons into concerted coherent motion \cite{Biggs2012,Mukamel2013} and then probe the local electronic environment with e.g.~time-resolved resonant inelastic x-ray scattering (tr-RIXS).
 There have been numerous schemes proposed for developing the attosecond capability of x-ray FEL facilities \cite{Ding2009,Xiang2009} with a particular push funded directly by the Office of Basic Energy Science aimed at LCLS-II implementation \cite{Marinelli2016,xLEAP}.
