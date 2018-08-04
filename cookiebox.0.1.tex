@@ -99,10 +99,11 @@ DOE National Laboratory Announcement Number: \textbf{FWP\#100498}\\
 
 
 \section*{Objective \ref{obj::streaking} -- Streaking}
+\input{active.streaking.tex}
+
 \section*{Objective \ref{obj::euv-xray} -- euv-xray}
 \input{active.euvxray.tex}
 
-Above 50 eV attosecond pulses we will be able to directly measure both x-ray and EUV attosecond pulses with the cookiebox.
 
 
 \begin{comment}
@@ -150,21 +151,7 @@ year 2
 \imput{active.realtimeanalysis.tex}
 
 
-programmable region of interest (ROI) enabled CMOS area detector \cite{cmosROI} to read out the cross-polarized spectrum.
-High speed optical CMOS detectors should allow well above 100 kHz duty-cycle for a 1\% ROI readout \cite{cmosspeed} to be available for FPGA-based algorithms so that data analysis can occur prior to transfer.
-It is the transfer of the 1\% linear ROI and subsequent on-board processing that limits the repetition rate of such a measurement since only the arrival time and quality of measurement need to be transferred to the recording nodes and to the optical laser synchronization system.
-Only very small data must be transferred over the network to remote data recording nodes.
 
-For the sake of LCLS-II commissioning in 2019, we will push for a repetition rate that extends beyond the control band of the laser oscillator (requirement~\ref{1disealgo}).
-A direct measurement of the temporal jitter power spectrum will aid the implementation of synchronization control systems.
-Furthermore, the tight causal connection between electron bunch and x-ray pulse motivates a direct measurement of the shot-to-shot timing in correlation with high-rate electron bunch diagnostics. 
-
-
-
-One of the biggest challenges for the attosecond science community today is the difficulty in producing significant pulse energy in the 200 eV -- 2 keV regime using high harmonic generation (HHG)\cite{Chen2014,Schmidt2016}.
-Given the importance of understanding exciton flow in photo-excited systems, one can foresee the desire to optically drive electrons into concerted coherent motion \cite{Biggs2012,Mukamel2013} and then probe the local electronic environment with e.g.~time-resolved resonant inelastic x-ray scattering (tr-RIXS).
-There have been numerous schemes proposed for developing the attosecond capability of x-ray FEL facilities \cite{Ding2009,Xiang2009} with a particular push funded directly by the Office of Basic Energy Science aimed at LCLS-II implementation \cite{Marinelli2016,xLEAP}.
-The primary obstacle that detracts the attosecond community from using an xFEL source is the lack of intrinsic synchronization enjoyed in lower-fluence lab-based HHG sources.
 
 
 %This measurement will require a near \textit{in situ} implementation. %though it is fully compatible with feeding back into the synchronization system.
@@ -181,197 +168,8 @@ In order to gain a factor of 10 in temporal resolution, one must multiplex in on
 This requires a 100 fold increase in signal compared to normal spectral encoding.
 Here again interferometric sensitivity will help.
 
-Unlike the original crossed-beam implementation, we prefer a tunable temporal window that does not require angle or spot size changes.
-By using a tilted pulse front rather than crossed beams, we preserve the optical geometry of the one-dimensional version while enabling a tunable measurement window.
-In addition, we also relieve the coupling of interaction time due to fluctuations in films or liquid sheets. 
-In a crossed beam geometry, if a liquid sheet develops a wobble or if the x-ray pulses induce film vibrations, longitudinal motion of the sample would effectively shift the space-to-time mapping from shot-to-shot.
-This effect worsens the further one goes away from co-propagating beams.
-A tilted wave-front in near co-propagating geometry alleviates this problem while still providing a space-to-time mapping that is in fact tunable.
-
-\begin{figure}
-%\vspace{-1.0\baselineskip}
-\centerline{	
-	\includegraphics[trim = {-2cm -2cm 2cm 1cm} ,clip,height=7.4cm]{newcartoon/spectrogram.cartoon.new.eps}
-	\vrule
-	\hspace{3mm}
-	\includegraphics[trim = {-1.6cm -1.5cm 1.7cm 2cm},clip,height=7.4cm]{plotting.interferesim.reverse.eps}
-%\includegraphics[clip,width=/figwidth]{lisa_Fig5.pdf}
-}
-\vspace{-.5\baselineskip}
-\caption{\label{2dinterferesim} Cartoon (left) and simulation (right) of the two-dimensional interferometric spectrogram concept.  Single line-out projections are indicated with line/fill colors.}
-\end{figure}
-
-In the tilted pulse-front supercontinuum beam, the pulse envelope experiences a delay across the transverse profile of the beam, indicated schematically in the vertical dimension in Fig.~\ref{2dinterferesim} (left).
-Exactly as in Objective~\ref{obj::controlling}, the two crossed polarizations experience a birefringent delay before interacting with an x-ray pulse.
-After the x-ray interaction, the polarizations are re-timed with a matched birefringent plate, and the signal is read out through the null port of the analyzing polarizer.
-The resulting diagonal feature in Fig.~\ref{2dinterferesim} (right) is then immune to the vertical and horizontal spatial modulations typical of the x-ray transverse profile.
-%Furthermore, the co-propagation geometry ensures full compatibility with the optical setup used for 1D-ISE.
-
-We will leverage high-speed CMOS area detectors to accommodate both the feedback signal for the synchronization system as well as a dynamic region of interest (ROI) selection for attosecond level post-sorting of the residual uncontrolled jitter.
-Single CMOS lineouts, indicated in Fig.~\ref{2dinterferesim} (right) by the purple and green colored lines are projected onto the spectral and spatial axes respectively.
-These can be immediately read out at well above 100 kHz \cite{cmosspeed} to determine the one-dimensional edge location for the synchronization system and also the center of the diagonal feature in Fig.~\ref{2dinterferesim} (right).
-%They additionally indicate the location of the two-dimensional diagonal spectrogram feature.
-This feature covers only about 10\% of the full image and so a small set of pixel values need to be read into the image buffer. %for on-board analysis.
-The shape of that ROI remains constant from shot-to-shot and only its offset will jitter. % --- in the vertical delay dimension --- with the residual single-shot temporal jitter.
-%An on-board analysis layer would use the two lineouts to coarsely locate the center of that 10\% ROI, extract only the peripheral pixel values, and perform the two-dimensional edge determination.
-One gains the multiplexing benefit of the two-dimensional readout even though only $\leq$10\% of the full image is passed to the analysis layer. 
-%The data bottleneck in the two-dimensional spectrogram encoding is again the data transfer from the camera chip to the on-board analysis hardware.
-From the current state of the art in CMOS readout --- 1 MPix at 1 k frames-per-second \cite{cmosspeed} --- we estimate that we can pull the 10\% ROI into the on-board analysis layer at about 10k fps.
-%Given the explosion in autonomous vehicle development, we expect that coming developments in optical image sensor technology and on-chip processing will improve both aspects of this rate limit.
-Furthermore, we will explore the use of an out-line only ROI that might further reduce the required transfer to the analysis layer and therefore push the 100 attoseconds resolution measurement above 10 kHz.
-In this way, the same detected signal that provides few femtosecond synchronization control also gives a value that can be used for 100 attoseconds temporal resolution in post sorting of the residual jitter.
-
-With the goal of pushing the attosecond resolution to the full LCLS-II beam rate, we will explore a method known as compressed sensing \cite{Candes2004a,Candes2004b,Candes2005,Elad2006,wired}. 
-In compressed sensing, signals that vary in response to a set of under-sampled variable parameters can be effectively interpolated to higher sampling.
-The requirement is that there exists a representation space, like a rotated Hilbert space, where the variations are sparsely represented.
-The simplistic example would be if the delay at LCLS-II ``jittered'' due to a 100 kHz oscillation.
-Under-sampling that oscillation, quasi-randomly, but on average only at 20 kHz, would require interpolation to predict the arrival times for interstitial pulses.
-The compressed sensing algorithm would in this case discover that the Fourier basis is the most sparse representation within which all the variation is explained by a 100 kHz $\delta$-function.
-Thus all of the 930 kHz shots can be ``interpolated'' \textit{a posteriori}.
-In practice, the active variables will span multiple dimensions of electron beam energy, orbit, and other parameters, since such algorithms typically work better with high-dimensional initial representations.
-In fact, this further motivates our highest repetition rate characterization of the delay correlations with electron beam properties mentioned in Objective~\ref{obj::contolling}.
-
 
 \section*{Objective \ref{obj::streaking} -- Attosecond angular streaking}
-
-There is increasing momentum in the development of spectro-temporally shaped x-ray FEL pulses \cite{eehg2009,Lutman13_twocolor,Marinelli13_twocolor,Allaria2014,Marinelli2015,Hemsing2016,Prince2016,Lutman2016,Marinelli2016} in response to the rising tide of demand \cite{Mukamel2007,Biggs2012,Mukamel2013,4WaveMixing,TIGER2015}.
-The predominant method to characterize such novel temporal profiles is based on an x-band transverse accelerating cavity (XTCAV) \cite{xtcav2014} whereby the spent electron bunch is deflected horizontally, streaked in time by the phase of the transverse accelerating field.
-A bending magnet then deflects this time-streaked beam vertically proportional to the energy.
-Imaging the result, one records the time-energy distribution of the spent bunch.
-This technique has been a critical tool for developing the recent x-ray FEL pulse shaping methods \cite{Marinelli2015,Marinelli2016}.
-Unfortunately, it indirectly measures the x-ray temporal profile by identifying the imprint of lasing on the electron bunch.
-Furthermore, barring a superconducting upgrade to the x-band cavity, the XTCAV can only run at 120 Hz.
-
-\begin{wrapfigure}[18]{r}{7.5cm}
-\vspace{-\baselineskip}
-\centerline{
-	\includegraphics[trim = {-2cm -2cm 2cm 1.7cm},clip,height=7.5cm]{streakingcartoon/newstreaking.cartoon.new.eps}
-}
-\vspace{-\baselineskip}
-\caption{
-	\label{streakingschematic} 
-	Schematic of linear photo-electron streaking.
-}
-\end{wrapfigure}
-
-Photo-electron streaking, a direct interaction, has the capability to measure the instantaneous temporal structure of x-ray pulses \cite{Hentschel2001}.
-In photo-electron streaking, a noble gas like neon is dressed by a strong far-infrared or THz field \cite{Helml2014,Juranic2014,Schulz2015}.
-As depicted in Fig.~\ref{streakingschematic}, the vector potential of the streaking field shifts the outgoing photo-electron energy depending on the phase of the field at the time of photoionization.
-The temporal shape (purple) can then be read out by the intensity profile of the photo-electrons versus their shifted energies (green), given that the pulse arrives near the zero-crossing of the vector potential.
-Our recent use of the organic crystal DAST \cite{DAST} for THz generation was capable of resolving 50 fs separated double pulses of the LCLS \cite{Matthias2016} that Cavalieri\etal have developed into robust photo-electron streaking system \cite{Schulz2015}.
-Such THz and far infrared based schemes \cite{Helml2014,Juranic2014} have a demanding $\sim$2 mJ/pulse laser power requirement will likely not scale well for the high repetition rates of LCLS-II (Table~\ref{lcls2specs}).
-
-The requirement that the x-ray pulse arrive near a zero-crossing of the vector potential is a persistent challenge.
-The Cavalieri group creatively arranges two photo-electron spectrometers to sample the focal volume of the THz field at two different places across the Gouy phase of the focus.
-As a beam propagates through a focus it develops a phase advance of $\pi$ --- the Gouy phase --- such that one can choose two points just on either side of the focus that have a $\pi$/2 Gouy phase difference.
-For shots when one of the detectors records the zero crossing of the field, the other detector will measure the maximum kick, thus calibrating the zero-crossing slope.
-In practice, however, THz and mid-infrared fields depend rather sensitively on environmental factors and on exactly from where in the Gouy phase one measures these streaked photo-electrons.
-Juranic\etal have attempted to use three spectrometers, one for the unstreaked photo-electron spectrum, and two back-to-back spectrometers to record simultaneously the positively and negatively streaked spectra.
-This method still suffers when the pulse arrives sufficiently away from the optimal zero-crossing phase.
-
-Miscalibration of the streaking ramp is also common since the changing particulars of the experiment, such as humidity and pump pointing, can dramatically affect the exact shape of the streaking field.
-%The fragility of the carrier field to environmental fluctuations scales with the fractional bandwidth ($\Delta\omega/\omega_0$) used to support the pulse duration.
-For the single cycle THz and few-cycle far-infrared fields typically used in x-ray streaking diagnostics, the fractional bandwidth $\Delta\omega/\omega_0$ is often nearly equal to unity.
-Such extreme fractional bandwidths make for very irregular carrier fields that vary depending on beam pointing and atmospheric humidity.
-%As a result, an often invasive recalibration procedure must be repeated periodically.
-This is largely why we have chosen to pursue an alternative approach in Ref.~\cite{Nick2016}.
-
-\begin{wrapfigure}[15]{r}{.5\linewidth}
-\centerline{\includegraphics[trim = {0 1cm 0 1cm},clip,width=\linewidth]{NickSchemeAngularStreaking.eps}}
-\vspace{-.5\baselineskip}
-\caption{\label{NickScheme}
-Angular streaking schematic.
-}
-\end{wrapfigure}
-
-We will leverage our long history with photo-electron streaking at the LCLS \cite{Duesterer11,Meyer12,Helml2014} by extending the attosecond angular streaking method of Refs.~\cite{CorkumAngularStreaking,KellerAngularStreaking} to the x-ray regime.
-Pulse-to-pulse variations at an FEL require single-shot measurements much like the velocity map imaging (VMI) \cite{VrakkingRSI} extension of attosecond angular streaking \cite{attoclockVMI2013}.
-The requirement of a two-dimensional detector, however, likely precludes high repetition rates. 
-We will therefore repurpose what is more traditionally considered an x-ray FEL polarimeter \cite{Markus2014,Allaria2014,Mazza2014,Lutman2016} to measure the angularly streaked photo-electron spectra \cite{Markus2014,Allaria2014,Mazza2014,Lutman2016}.
-
-We recently demonstrated attosecond angular streaking at LCLS with an angular array of 16 electron time-of-flight detectors --- the ``CookieBox'' --- as depicted in Fig.~\ref{NickScheme}.
-We measured full photo-electron spectra in each of the 16 detectors operating in current, not counting, mode.
-The result was an x-ray pulse temporal reconstruction with 500 attoseconds resolution \cite{Nick2016} which we propose here to extend to the 150 attoseconds resolution scale.
-We also plan to demonstrate both spectral and polarization sensitivity versus time as well as operation at high repetition rate.
-
-\begin{wrapfigure}[20]{l}{.5\linewidth}
-\vspace{-\baselineskip}
-\centerline{\includegraphics[trim = {0cm 0 18.5cm 0},clip,width=\linewidth]{nick_fig2.eps}}
-\centerline{\includegraphics[trim = {18.5cm 0 0 0},clip,width=\linewidth]{nick_fig2.eps}}
-\vspace{-1\baselineskip}
-\caption{\label{NickRetrieval}X-ray pulse shape retrieval from our recent angular streaking measurement at LCLS \cite{Nick2016}.}
-\end{wrapfigure}
-
-In angular streaking, the x-ray pulse produces neon photo-electrons that distribute into a dipole probability distribution with a common kinetic energy regardless of emission angle.
-When dressed with the circularly polarized laser field, shown as the red corkscrew pattern in Fig.~\ref{NickScheme}, those electrons will receive a momentum kick toward the instantaneous direction of the vector potential in a reference frame that spirals relative to the lab frame at the carrier cycle frequency.
-In this way, one detector will measure electrons with an excess of energy, the opposite detector with less energy, and the two orthogonal detectors will measure the photo-electrons as the projected vector-potential sweeps through a zero-crossing.
-The additional detectors further constrain the pulse shape retrieval shown in Fig.~\ref{NickRetrieval} where the measured spectra reveal a nearly single sub-fs FEL pulse as required for such techniques as impulsive x-ray Raman spectroscopy \cite{TIGER2015}.
-
-Preliminary results demonstrate 500 attoseconds resolution \cite{Nick2016}.
-This resolution depends both on the spectral resolution of the electron time-of-flight spectrometers and on the number of angular sample points per optical cycle.
-The typical space constraints near beamlines and individual detector geometries limits the CookieBox array to 16 detectors. %a 1 meter diameter by limiting the number of detectors.
-%The diminishing returns for adding more detector assemblies has driven the design to 16 angles.
-Modeled after the original Viefhaus design, we propose a universal main chamber that can accept a micro-channel plate based electron detector with 100 ps impulse response.
-We have begun discussions with the detector group at University of Bern regarding the design of a modular CookieBox style system.
-Of particular interest is the application of super-resolution concepts, such as explored for temporal sorting in Objective~\ref{obj::sorting}.
-One generally seeks a non-uniformly distributed under-sampling of a waveform, in this case the angular distribution, in order to reconstruct an accurately interpolated result \cite{Candes2004a,Candes2004b,Candes2005,Elad2006}. 
-In simulation we will explore the efficacy of non-uniformly placed detectors for super-resolution in the angular distribution.
-
-We will also shift the dressing laser frequency toward the near-infrared to improve the temporal resolution.
-Based on Refs.~\cite{lcls2_opportunities,Biggs2012,Mukamel2013} we expect that much of the x-ray pulse characterization needs will lie in the sub-10 fs regime.
-We propose therefore to shift to a 3 $\mu$m wavelength to both improve the fractional bandwidth for a robust carrier shape and to improve the temporal resolution while still preserving an appropriate window for pulse shape retrieval.
-We expect this change to take our initial demonstration of 500 attosecond resolution for a 10 $\mu$m angular streaking field --- 33 fs optical cycle --- to an expected 150 attoseconds resolution for a 3 $\mu$m field --- 11 fs optical cycle.
-
-More generally, the angular streaking technique can provide users with a direct measure of novel x-ray pulse shapes as required for stimulated RIXS and other multi-dimensional x-ray spectroscopic techniques \cite{Biggs2012,Mukamel2013,4WaveMixing}.
-Shown in Fig.~\ref{coffeestains} we see a simulation of two xFEL pulses, one lower photon energy pulse that is linearly polarized along the horizontal and another higher photon energy pulse that is circularly polarized.
-From left to right the inter-pulse delay changes from 0 fs -- 2 fs.
-Such a temporal diagnostic will allow not only the demonstration of attosecond FEL pulses but also the full temporal, spectral, and polarization characterization of shaped multi-pulses.
-
-%\begin{wrapfigure}[14]{r}{.6\linewidth}
-\begin{figure}[b]
-\vspace{-1.5\baselineskip}
-\centerline{
-%\includegraphics[trim={2cm -6cm 3cm 6cm},clip,height=.33\linewidth]{delay0.eps}
-%\includegraphics[trim={2cm -6cm 3cm 6cm},clip,height=.33\linewidth]{delay-1.5.eps}
-\includegraphics[trim={0cm -2cm 0cm 2cm},clip,height=6cm]{fromNick/angular_streaking_sim_combined.reverse.eps}
-}
-\vspace{-1.0\baselineskip}
-\caption{\label{coffeestains} Simulated 3 $\mu$m angular streaking as described in the text. From left to right, the inter-pulse delay progresses from 0 fs -- 2 fs.}
-%\end{wrapfigure}
-\end{figure}
-
-
-The on-board analysis of the data is a challenging bottleneck in the angular streaking scheme.
-The raw data in angular streaking is the digitized waveform spanning about 200 ns of record length with a sample frequency of ideally about 4GS/s, one waveform for each of the 16 detectors.
-All together this would be comparable to a 12.8 kPix image being fed into the analysis layer.
-We estimate a maximum duty-cycle above 100 kHz by comparing to the 1\% CMOS ROI discusses in Objective~\ref{obj::controlling}, assuming that the analysis algorithm can keep up with the data frame rate.
-%Detailed in the forthcoming Ref.~\cite{Nick2016}, we iteratively account for intensity in the polar representation of the angular photo-electron spectrum.
-%This so called ``PacMan'' routine is iterative and therefore computationally intensive.
-Instead of our original iterative retrieval algorithm \cite{Nick2016}, we plan here to develop a mapping technique that could be implemented as a simple on-board matrix multiplication.
-In parallel to our pursuit of a mapping algorithm, we will continue our pursuit of machine learning to predict the multi-pulse delays and multi-color separations based only on electron beam information.
-Through the active collaboration with the Marangos group we have focused initially on using the small data from electron bunch diagnostics as inputs to various machine learning algorithms. \cite{AlvaroML2016}
-The various models are trained based on measured spectra of the final x-ray pulses and the temporal profiles based on XTCAV measurements.
-After training, the electron bunch diagnostics are used to predict x-ray pulse characteristics such as inter-pulse delay and double pulse separation with 95\% or better predictive accuracy (Fig.~\ref{AlvaroIdea}) Ref.~\cite{AlvaroML2016}. 
-
-\begin{wrapfigure}[27]{r}{.5\linewidth}
-\vspace{-1\baselineskip}
-\centerline{
-%\includegraphics[trim={0 5cm 0 0},height=4cm]{face_106.crop.connectedlayers.eps}
-\includegraphics[width=\linewidth]{AlvaroArXive1610.03378v1_corrs.eps}
-%\vrule
-}
-\hrule
-\centerline{
-\includegraphics[trim={5.6cm -1cm 0 0},clip,width=\linewidth]{AlvaroArXive1610.03378v1_energies.eps}
-}
-\vspace{-2\baselineskip}
-\caption{\label{AlvaroIdea} The efficacy of machine learning for predicting temporal delay (top) and color separation (bottom) for shaped FEL pulses. \cite{AlvaroML2016}}
-\end{wrapfigure}
-
-Through another collaboration with the data analysis group at LCLS we are exploring the use of convolutional neural networks for so-called ``deep learning.'' % for image interpretation.
-Convolutional neural networks (CNNs) represent the most widely used machine learning architecture for image classification that can also be implemented directly into on-board analysis hardware \cite{cognimem}.
-We are seeking deep learning methods such as ``guided'' and ``relevance'' back propagation to uncover the physical basis of how a neural network determines its predictive outputs \cite{Mihir}.
-Whether it is a physics based algorithm, a physically interpretable neural network, or simply black-box machine learning, we expect an on-board analysis architecture that will significantly reduce the required data transfer and ideally produce x-ray pulse time-domain waveforms with a duty cycle above 10 kHz.
 
 
 
