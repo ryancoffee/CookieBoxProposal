@@ -1,8 +1,8 @@
 \contentsline {section}{Project Summary}{0}
-\contentsline {section}{Introduction}{2}
-\contentsline {subsection}{Streaking for X-ray Pulse Reconstruction}{3}
-\contentsline {paragraph}{Two-color}{5}
-\contentsline {subsection}{Time-resolved photo and Auger electron emission}{5}
+\contentsline {section}{Introduction}{1}
+\contentsline {subsection}{Streaking for X-ray Pulse Reconstruction}{2}
+\contentsline {paragraph}{Two-color}{4}
+\contentsline {subsection}{Time-resolved photo and Auger electron emission}{4}
 \contentsline {subsection}{Attosecond EUV/x-ray pump-probe experiments}{5}
 \contentsline {section}{Objectives}{6}
 \contentsline {subsection}{Optimized Detector Array}{6}
@@ -10,9 +10,9 @@
 \contentsline {section}{Schedule}{8}
 \contentsline {subsection}{Organization of Major Activities}{8}
 \contentsline {subsection}{Responsibilities of key project personnel}{9}
-\contentsline {section}{Appendix 1: Biographical Sketch}{10}
-\contentsline {section}{Appendix 2: Current and Pending Support}{13}
-\contentsline {section}{Appendix 3: Bibliography and References Cited}{14}
-\contentsline {section}{Appendix 4: Facilities and Other Resources}{15}
-\contentsline {section}{Appendix 5: Equipment}{16}
-\contentsline {section}{Appendix 6: Data Management Plan}{17}
+\contentsline {section}{Appendix 1: Biographical Sketch}{11}
+\contentsline {section}{Appendix 2: Current and Pending Support}{14}
+\contentsline {section}{Appendix 3: Bibliography and References Cited}{15}
+\contentsline {section}{Appendix 4: Facilities and Other Resources}{16}
+\contentsline {section}{Appendix 5: Equipment}{17}
+\contentsline {section}{Appendix 6: Data Management Plan}{18}

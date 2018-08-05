@@ -1,17 +1,3 @@
-HHG sources are encroaching on the FEL \cite{Biegert2014,Zenghu2017}, though the intensities and repetition rates available at FEL sources like the LCLS-II drive a growing need for attosecond ....
-
-
-The advent of x-ray free electron lasers (xFELs) has brought the ability to resolve ultrafast processes in molecular and material systems on their natural time and length scales \cite{Fritz2007,Katayama2013,Mariano2013,McFarland2014}.
-Given the MHz scale repetition rate of Table~\ref{lcls2specs} for the coming facility upgrade --- the Linac Coherent Light Source II (LCLS-II) --- such a measure-and-sort method would effectively require every shot be recorded, increasing the data load from the 10 TB/day of today to 100 PB/day.
-Such a load would require an enormous cost for developing the ultra-high duty-cycle area detectors and the corresponding network and storage infrastructure. 
-
-USE FIGURE FROM CEDERBAUM \cite{Cederbaum2008}
-
-One of the biggest challenges for the attosecond science community today is the difficulty in producing significant pulse energy in the 200 eV -- 2 keV regime using high harmonic generation (HHG)\cite{Chen2014,Schmidt2016}.
-Given the importance of understanding exciton flow in photo-excited systems, one can foresee the desire to optically drive electrons into concerted coherent motion \cite{Biggs2012,Mukamel2013} and then probe the local electronic environment with e.g.~time-resolved resonant inelastic x-ray scattering (tr-RIXS).
-There have been numerous schemes proposed for developing the attosecond capability of x-ray FEL facilities \cite{Ding2009,Xiang2009} with a particular push funded directly by the Office of Basic Energy Science aimed at LCLS-II implementation \cite{Marinelli2016,xLEAP}.
-The primary obstacle that detracts the attosecond community from using an xFEL source is the lack of intrinsic synchronization enjoyed in lower-fluence lab-based HHG sources.
-
 
 \begin{wraptable}[14]{r}{.45\linewidth}
 \vspace{-1.5\baselineskip}
@@ -30,21 +16,29 @@ Pulse energy & 4 mJ & 0.1--5\footnotemark[1] mJ\\
 \footnotemark[1] $\geq$ 200 $\mu$J only at reduced repetition rate, conserving 200 W maximum average power.
 \end{wraptable}
 
+The advent of x-ray free electron lasers (xFELs) has brought the ability to resolve ultrafast processes in molecular and material systems on their natural time and length scales \cite{Fritz2007,Katayama2013,Mariano2013,McFarland2014}.
+Given the MHz scale repetition rate of Table~\ref{lcls2specs} for the coming facility upgrade --- the Linac Coherent Light Source II (LCLS-II) --- such a measure-and-sort method would effectively require every shot be recorded, increasing the data load from the 10 TB/day of today to 100 PB/day.
+Such a load would require an enormous cost for developing the ultra-high duty-cycle area detectors and the corresponding network and storage infrastructure. 
+
+One of the biggest challenges for the attosecond science community today is the difficulty in producing significant pulse energy in the 200 eV -- 2 keV regime using high harmonic generation (HHG)\cite{Chen2014,Schmidt2016}.
+These sources are encroaching on this range \cite{Biegert2014,Zenghu2017}, however the intensities and repetition rates available at FEL sources like the LCLS-II (Table \ref{lcls2specs}) are driving the community to look toward all x-ray pump-probe. 
+Given the importance of understanding electron flow in photo-excited systems (Fig.~\ref{fig::cederbaum}), one can foresee the desire to optically drive electrons into concerted coherent motion \cite{Cederbaum2008,Biggs2012,Mukamel2013} and then probe the local electronic environment with time-resolved x-ray sepctroscopies.
+There have been numerous schemes proposed for developing the attosecond capability of x-ray FEL facilities \cite{Ding2009,Xiang2009} with a particular push funded directly by the Office of Basic Energy Science aimed at LCLS-II implementation \cite{Marinelli2016,xLEAP}.
 
 
-Many attosecond scale experiments, currently only enabled by high-harmonic generation (HHG)\cite{Lewenstein1994,Hentschel2001,Chen2014,Schmidt2016}, would greatly benefit from the much higher brightness of an attosecond xFEL beamline \cite{Ding2009,Xiang2009}.
-This would effectively exchange the flux challenge of HHG sources for the challenge of synchronizing optical and xFEL pulses with 100 attosecond precision.
-Helium buffer gas with 20eV photoelectrons into grounded detectors will enable angular streaking simultaneously of EUV attosecond pulses with x-ray attosecond pulses in the identical scheme as the x-ray atto pairs.
+\begin{wrapfigure}[14]{l}{.5\linewidth}
+\caption{\label{fig::cederbaum}Reproduced from Ref.~\cite{Cederbaum2008} we show the oscillating valence electron coherence.}
+\end{wrapfigure}
 
-Achieving the full capability of x-ray laser science will require the control of the x-ray spectral phase.
+Achieving the full capability of attosecond x-ray laser science will require the diagnosis and control of the x-ray spectral phase.
 The development of temporally shaped x-ray FEL pulses would not only facilitate attosecond pulse generation but also a number of multi-pulse non-linear techniques.
 A continued progress on this front \cite{Lutman13_twocolor,Marinelli13_twocolor,Allaria2014,Marinelli2015,Prince2016,Lutman2016,Marinelli2016} will require full spectral phase, amplitude and polarization characterization. 
 We therefore propose a single-shot diagnostic that reports the full temporal intensity, wavelength, and polarization distributions with $\sim$150 attoseconds resolution at the highest repetition rates, limited only by the optical laser repetition rate that is used for the streaking drive laser.
 
+
 We restrict ourselves to two fundamental objectives:
 \begin{enumerate}
-\item \label{obj::streaking} Developing a single-shot diagnostic that reports the full temporal intensity, wavelength, and polarization distribution also with $\sim$150 attoseconds resolution at the highest laser repetition rate up to 1MHz.  
-The pulse retrieval will allow reconstruction of even two-color x-ray pulses where the color separation can be even hundreds of eV separated, in order to allow for multi-element resonant experiments.
-\item \label{obj::euv-xray} Extending the x-ray/optical cross-correlation technique to allow for single-shot sorting of the residual jitter to a resolution of $\sim$100 attoseconds at a $\geq$10 kHz repetition rate.
-\item \label{obj::ml} We will develop the algorithms used to recover the x-ray pulse structure, including the the use of so-called EdgeML whereby the machine learning inference models are loaded onto FPGA chips for accelerated pulse reconstruction based on inference matrices.
+\item \label{obj::detector} We will perform the necessary reasearch and development required to eventually deliver an optimized angular array of electron Time-of-Flight spectrometers.
+\item \label{obj::analysis} We will co-develop the requisite algorithms and machine learning compliments together with the detector electronics such in odred to optimally match the real-time analysis routines with detector electronics and computing hardware that push the tenchnology envelope.
 \end{enumerate}
+

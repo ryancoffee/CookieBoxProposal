@@ -1,9 +1,4 @@
-We will likely use mutliple, computationally expensive, pulse retrieval algorithms \cite{Thomas2015,HJWorner2018} to determine the ``ground truth'' for a sub-set of full fidelity recorded x-ray pulse shapes.
-
-High speed FPGA-based algorithms so that data analysis can occur prior to transfer.
-Only very small data must be transferred over the network to remote data recording nodes.
-Furthermore, the tight causal connection between electron bunch and x-ray pulse motivates a direct measurement of the shot-to-shot timing in correlation with high-rate electron bunch diagnostics. 
-
+We will in parallel develop a pulse retrieval pipeline that will reconstruct two-color x-ray pulses.
 
 Data handling is a key challenge for which we plan to use a FPGA-based machine learning inferencing.
 The inference model will be trained based on a transfer learning paradigm whereby the central hidden layers, e.g. the simulation trained core layers, will be optimized to recover x-ray pulse shapes (ground truth) given simulated angular streaking results.
@@ -15,10 +10,18 @@ The on-board analysis of the data is a challenging bottleneck in the angular str
 The raw data in angular streaking is the digitized waveform spanning about 200 ns of record length with a sample frequency of ideally about 4GS/s, one waveform for each of the 16 detectors.
 All together this would be comparable to a 12.8 kPix image being fed into the analysis layer.
 We estimate a maximum duty-cycle above 100 kHz by comparing to the 1\% CMOS ROI discusses in Objective~\ref{obj::controlling}, assuming that the analysis algorithm can keep up with the data frame rate.
-%Detailed in the forthcoming Ref.~\cite{Nick2016}, we iteratively account for intensity in the polar representation of the angular photo-electron spectrum.
-%This so called ``PacMan'' routine is iterative and therefore computationally intensive.
-Instead of our original iterative retrieval algorithm \cite{Nick2016}, we plan here to develop a mapping technique that could be implemented as a simple on-board matrix multiplication.
-In parallel to our pursuit of a mapping algorithm, we will continue our pursuit of machine learning to predict the multi-pulse delays and multi-color separations based only on electron beam information.
+Detailed in Ref.~\cite{Nick2018}, we iteratively account for intensity in the polar representation of the angular photo-electron spectrum.
+This so called ``PacMan'' routine as well as a similar method of projections \cite{Siqi2018} are computationally expensive.
+We therefore plan to reserve these and other retrieval methods \cite{Thomas2015,HJWorner2018} for the generation of so-called ``ground truth'' for a sub-set of full fidelity recorded x-ray pulse shapes.
+This sub-set wil lthen be used for training and validating a faster inference matrix solution that could be implemented as a series of FPGA-based on-board matrix multiplications.
+Only very small data of the retrieved pulse would be transferred over the network to remote data recording nodes along with intermittent high fidelity shots for the validation and re-training when needed.
+We will use simulations of angular streaking from expected FEL pulses, together with the detector array simulations used for the design modelling, to iterate on the detector hardware configurations and the analysis pipeline from electronics to inference output.
+
+HERE HERE HERE 
+
+
+
+
 Through the active collaboration with the Marangos group we have focused initially on using the small data from electron bunch diagnostics as inputs to various machine learning algorithms. \cite{AlvaroML2016}
 The various models are trained based on measured spectra of the final x-ray pulses and the temporal profiles based on XTCAV measurements.
 After training, the electron bunch diagnostics are used to predict x-ray pulse characteristics such as inter-pulse delay and double pulse separation with 95\% or better predictive accuracy (Fig.~\ref{AlvaroIdea}) Ref.~\cite{AlvaroML2016}. 
