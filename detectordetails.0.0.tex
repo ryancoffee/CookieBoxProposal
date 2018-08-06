@@ -23,24 +23,19 @@ Furthermore, by shifting the dressing laser frequency toward the near-infrared w
 Based on Refs.~\cite{lcls2_opportunities,Cederbaum2008,Biggs2012,Mukamel2013} we expect that much of the x-ray pulse characterization needs will lie in the sub-10 fs regime.
 We propose therefore to shift to a 2-3~$\mu$m wavelength to both improve the fractional bandwidth for a robust carrier shape and also to improve the temporal resolution while still preserving an appropriate window for pulse shape retrieval.
 This change should take our initial demonstration of 500 attosecond resolution for a 10~$\mu$m, 33~fs optical cycle, angular streaking field to an expected 150 attoseconds resolution for a 3 $\mu$m field --- 11 fs optical cycle.
+Figure~\ref{fig::jamessim} shows a 4~$\mu$m simulation of two xFEL pulses that are separated by only 4~fs.
 By pushing further down to a 1~$\mu$m streaking field, we could expect to achieve temporal resoltuions competative with laser-based HHG state-of-the-art \cite{Zenghu2017,HJWorner2017}.
-
-%\paragraph{Double pulses}
-\begin{wrapfigure}[21]{l}{.5\linewidth}
-\centerline{\includegraphics[width=.8\linewidth]{naturePhoton_NickWolfi.doublepulses.eps}}
-\caption{\label{fig::doublepulses}Reproduced from Ref.~\cite{Nick2018}.
-Roughly 1\% of the SASE pulses show only two spikes when running in low charge mode with emittance shaping.
-Such pulses can then be sorted, allowing a ``measure-and-sort'' x-ray pump/x-ray probe experimental paradigm.}
+\begin{wrapfigure}[20]{l}{.5\linewidth}
+\centerline{\includegraphics[trim={0 0 0 10mm},width=\linewidth]{jamessim.eps}}
+\caption{\label{fig::jamessim}Simulation of two attosecond x-ray pulses separated by 4~fs dressed by a 4~$\mu$m streaking field.}
 \end{wrapfigure}
-Figure~\ref{fig::doublepulses} shows that angular streaking can not only identify double pulses, but also sort such pulses into relative delay \cite{Nick2018}.
+
 When diagnosing closely separated double pulses, the angular acceptance of the electron spectrometers are a principle concern \cite{Worner2018}.
 We plan to optimize this angular acceptance such that we relax slightly the collection for the sake of preserving the resolution.
 We were able to reduce the sample density by 10-fold in Ref.~\cite{Nick2018} to avoid the onset of space-charge blurring of the streaking resolution.
 We expect that we can sacrifice a factor of 6 in signal in order to relax the angular collection of the eTOFs.
 This reduced collection will be partially compensated by a new chamfered-pore design for the microchannel plates that improves collection efficiency.
 
-
-%\paragraph{Two-color double pulses}
 Motivated by the great progress in multi-color FEL modes \cite{Lutman13_twocolor,Marinelli13_twocolor,Allaria2014,Marinelli2015,Prince2016,Lutman2016,Marinelli2016,Lutman2016FreshSlice}, we are capitalize on the two-fold over sampling in the angular dimension.
 The color separation between multi-pulses using the new soft x-ray undulator of LCLS-II could be made to interrogate different atomic species with absorption resonances separated by hundreds of eV.
 Our two-fold over sampling in the angular dimension allows us to fully retrieve the temporal, spectral, and polarization characterization of shaped multi-pulses \cite{Lutman2016,Lutman2016FreshSlice}.
