@@ -1,16 +1,16 @@
 \contentsline {section}{Project Summary}{0}
 \contentsline {section}{Introduction}{1}
 \contentsline {subsection}{Streaking for X-ray Pulse Reconstruction}{2}
-\contentsline {subsection}{Attosecond EUV/x-ray pump-probe experiments}{3}
+\contentsline {subsection}{Attosecond pump-probe experiments}{3}
 \contentsline {section}{Objectives}{4}
 \contentsline {subsection}{Optimized Detector Array}{4}
 \contentsline {subsection}{Real time analysis}{6}
-\contentsline {section}{Schedule}{7}
-\contentsline {subsection}{Organization of Major Activities}{7}
-\contentsline {subsection}{Responsibilities of key project personnel}{8}
-\contentsline {section}{Appendix 1: Biographical Sketch}{10}
-\contentsline {section}{Appendix 2: Current and Pending Support}{13}
-\contentsline {section}{Appendix 3: Bibliography and References Cited}{14}
-\contentsline {section}{Appendix 4: Facilities and Other Resources}{15}
-\contentsline {section}{Appendix 5: Equipment}{16}
-\contentsline {section}{Appendix 6: Data Management Plan}{17}
+\contentsline {section}{Schedule}{6}
+\contentsline {subsection}{Organization of Major Activities}{6}
+\contentsline {subsection}{Responsibilities of key project personnel}{7}
+\contentsline {section}{Appendix 1: Biographical Sketch}{9}
+\contentsline {section}{Appendix 2: Current and Pending Support}{12}
+\contentsline {section}{Appendix 3: Bibliography and References Cited}{13}
+\contentsline {section}{Appendix 4: Facilities and Other Resources}{14}
+\contentsline {section}{Appendix 5: Equipment}{15}
+\contentsline {section}{Appendix 6: Data Management Plan}{16}

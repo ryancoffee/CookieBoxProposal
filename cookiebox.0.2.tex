@@ -1,0 +1,140 @@
+%\documentclass[letterpaper,oneside,11pt,openany]{article}
+\documentclass[letterpaper,oneside,11pt]{article}
+
+\usepackage{anysize}%,layout}
+\usepackage{url}
+\usepackage{longtable}
+\usepackage{amsmath}%\usepackage{matrix}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{lipsum}
+\usepackage[dvipdfmx]{graphicx}
+\usepackage{lscape}
+\usepackage{verbatim}
+\usepackage{cite}
+\usepackage{listings}
+\usepackage{geometry}
+\usepackage{pdfpages}
+\usepackage{wrapfig}
+\usepackage{multicol}
+\usepackage{fancyhdr}
+
+\usepackage{enumitem}
+
+%\usepackage{tgbonum}
+
+ 
+\setlength{\headheight}{14pt}
+\marginsize{22.5mm}{22.5mm}{22.5mm}{8mm}
+
+\newcommand{\ket}[1]{\ensuremath{\left| #1 \right\rangle}}
+\newcommand{\bra}[1]{\ensuremath{\left\langle #1 \right|}}
+\newcommand{\braket}[2]{\ensuremath{\left\langle #1 \right|\left. #2 \right\rangle}}
+\newcommand{\expect}[1]{\ensuremath{\left\langle #1 \right\rangle}}
+\newcommand{\eV}{\mbox{eV}}
+\newcommand{\icm}{\ensuremath{\mbox{cm}^{-1}}}
+\newcommand{\cm}{\mbox{cm}}
+\newcommand{\EE}[1]{\ensuremath{\times 10^{ #1 }}}
+\newcommand{\ee}[1]{\ensuremath{\times 10^{ #1 }}}
+\newcommand{\etal}{,~\textit{et~al.~}}
+\newcommand{\norm}[1]{\ensuremath{\left| #1 \right|}}
+\newcommand{\abs}[1]{\ensuremath{\left| #1 \right|}}
+\newcommand{\HH}{\mathcal{H}}
+\newcommand{\eps}{\varepsilon}
+\newcommand{\degree}[1]{\ensuremath{#1^{\circ}}}
+
+\renewcommand{\baselinestretch}{1}
+
+\newcommand{\figwidth}{\linewidth}
+\newcommand{\figheight}{0.5\linewidth}
+\newcommand{\tabstop}{24pt}
+
+\graphicspath{{./figs/}}
+
+\title{Enabling long wavelength streaking for attosecond x-ray science.}
+\author{
+PI Ryan Coffee, Senior Staff Scientist\\
+LCLS Science Research and Development \& The PULSE Institute,\\
+SLAC National Accelerator Laboratory\\
+650.387.0981, coffee@slac.stanford.edu\\
+DOE National Laboratory Announcement Number: \textbf{FWP\#100498}\\
+}
+
+\setcounter{tocdepth}{3}
+
+\include{myfootnote_preamble}
+
+
+\begin{document}
+
+\pagestyle{fancy}
+\lhead{Enabling long wavelength streaking for attosecond x-ray science}
+\rhead{Ryan N.~Coffee}
+
+%\clearpage
+\setcounter{page}{0}
+
+\thispagestyle{empty}
+\section*{Project Summary}\addcontentsline{toc}{section}{Project Summary}
+\input{active.project_summary.tex}
+
+\maketitle
+\thispagestyle{empty}
+\tableofcontents
+
+\pagebreak
+\pagestyle{fancy}
+\setcounter{page}{1}
+
+\noindent{\Large \textbf{Project Narrative}}\\
+
+\section*{Introduction}\addcontentsline{toc}{section}{Introduction}
+\input{active.introduction.tex}
+
+\subsection*{Streaking for Xray Pulse Reconstruction}\addcontentsline{toc}{subsection}{Streaking for X-ray Pulse Reconstruction}
+\input{active.streaking.tex}
+
+%\subsection*{Time-resolved photo and Auger electron emission}\addcontentsline{toc}{subsection}{Time-resolved photo and Auger electron emission}
+%\input{active.photoauger.tex}
+
+\subsection*{Attosecond pump-probe experiments}\addcontentsline{toc}{subsection}{Attosecond pump-probe experiments}
+\input{active.pumpprobe.tex}
+
+\section*{Objectives}\addcontentsline{toc}{section}{Objectives}
+
+\subsection*{Optimized Detector Array}\addcontentsline{toc}{subsection}{Optimized Detector Array}
+\input{active.detectordetails.tex}
+
+\subsection*{Real time analysis}\addcontentsline{toc}{subsection}{Real time analysis}
+\input{active.realtimeanalysis.tex}
+
+
+%%%%%%%%%%%%%%% TIMELINE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% TIMELINE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% TIMELINE %%%%%%%%%%%%%%%%
+\section*{Schedule}\addcontentsline{toc}{section}{Schedule}
+\input{active.schedule.tex}
+
+
+\clearpage
+\appendix
+
+%%%%%%%%%%%%%%%% BIO SKETCH %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% BIO SKETCH %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% BIO SKETCH %%%%%%%%%%%%%%%%%
+\section*{Appendix 1: Biographical Sketch}\addcontentsline{toc}{section}{Appendix 1: Biographical Sketch}
+\input{active.biosketch.tex}
+
+\clearpage
+\input{active.append2-6.tex}
+
+%
+%\clearpage
+%\appendix
+%\section*{Appendix 7: Letters of Collaboration}\addcontentsline{toc}{section}{Appendix 7: Letters of Collaboration}
+%
+%Please see attached Letters of Collaboration.
+
+\end{document}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%% END DOCUMENT %%%%%%%%%%%%%%%%% END DOCUMENT %%%%%%%%%%%%%%%%%%%%%%
+
+
+

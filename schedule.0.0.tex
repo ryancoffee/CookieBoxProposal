@@ -1,9 +1,4 @@
 \subsection*{Organization of Major Activities}\addcontentsline{toc}{subsection}{Organization of Major Activities}
-
-We schedule the development of the attosecond angular streaking effort to coincide with the attosecond x-ray pulse developments at LCLS.
-We will benchmark the resolution of the angular streaking method by measuring attosecond and multi-pulse, multi-color, multi-polarization mode of Ref.~\cite{Lutman2016} to benchmark our ability to directly measure the full time-dependent spectrum and polarization of novel shaped x-ray FEL pulses.
-
-
 \begin{table}
 \caption{\label{tab::schedule} Timeline of the R\&D schedule. Project Years (PY) are sub-divided into 6 month blocks. }
 \begin{tabular}{l|l|l|l}
@@ -17,53 +12,46 @@ somethign & else& and & this\\
 
 
 \paragraph*{Period 0.0: 7/1/2018 -- 12/31/2018\\}
-\textbf{Objective \ref{obj::streaking}: }
 Test 2$\mu$m streaking with attosecond pulses from LCLS-I using Axial VMI \cite{Siqi2018}.\\
 \textbf{Publication(s): }
-``Thomas Paper''
+``Attoclock Ptychography'' -- Tobias Schweizer \textit{et al.} \cite{Feurer2018}
 
 \paragraph*{Period 0.5: 1/1/2019 -- 6/31/2019\\}
-\textbf{Objective \ref{obj::streaking}: }
-Design new CookieBox detector, use existing data to develop physics based algorithms for streaming analysis.\\
+Design detectors for array, use existing data to develop algorithms for streaming analysis.\\
+Implement on-board FPGA processing and demonstrate/simulate calibration learning, detail implementation plan for LCLS-II.\\
 \textbf{Publication(s): }
-``Martin and Rupert''
-``Gregor Paper''
+``Online, single-shot characterization of few-femtosecond X-ray temporal pulse substructures at free-electron lasers via angular streaking'' -- Rupert Heider \textit{et al.}
+``Machine Learning enabled x-ray pulse reconstruction'' --  Gregor Hartmann \textit{et al.}
 
 \paragraph*{Period 1.0: 7/1/2019 -- 12/31/2019\\}
-Construct new modular CookieBox detector for LCLS-II.\\
-\textbf{Publication(s): }
-``Transfer Learning paper''
-
-\paragraph*{Period 1.5: 1/1/2020 -- 6/31/2020, instrument commissioning\\}
-Implement on-board FPGA processing and demonstrate/simulate calibration learning, detail implementation plan for LCLS-II.\\
-Build passive CEP locked 3 $\mu$m pulses, commission new CookieBox detector for LCLS-II, develop algorithm for streaming analysis, benchmark 150 attosecond resolution.\\
+Construct detector array prototype for Building 40 benchmarks and LCLS-II beneficial occupancy.\\
 \textbf{Publication(s): }
 ``Benchmarking/Novel algorithm for real-time x-ray pulse characterization at the LCLS-II.''
 
-\paragraph*{Period 5: 7/15/2021 -- 7/14/2022, LCLS-II operating\\}
-Install on LCLS-II with on-board processing, benchmark resolution with NEXAFS of 3 $\mu$m laser dressing of N$_2$O, and develop the implementation matrix for various locations in LCLS-II, and explore high rep-rate application to hard x-ray regime.\\
+\paragraph*{Period 1.5: 1/1/2020 -- 6/31/2020, instrument commissioning\\}
+Install array on LCLS-II and benchmark resolution with XAFS using 3 $\mu$m laser dressing of N$_2$O.
 \textbf{Publication(s): }
 ``Streaming attosecond resolution x-ray pulse characterization: spectrum, polarization, and time.''
 ``Shaped attosecond x-ray FEL pulses for nonlinear x-ray science''
 ``Direct observation of laser-mixing of valence electronic symmetries.''
 
-
-
-
 \subsection*{Responsibilities of key project personnel}\addcontentsline{toc}{subsection}{Responsibilities of key project personnel}
+The PI will be responsible for leading the design effort to ensure a fundamentally integrated system, from chamber design and detector hardware to signal readout and waveform analysis.
+He will also be principally concerned with the pulse reconstruction algorithm and data analysis pipeline.
 
-The PI will be responsible for organizing the major efforts including algorithm development, optical design, and coordination of engineering design and hardware construction.
-He is expected to contribute 65\% of his effort to this project.
+Co-investigator Peter Walter is a Staff Scientist in LCLS Science Research and Development and will principally lead the detector simulations and construction.
+Peter will also primarily lead the installation for early testing of the final concepts.
+Co-investigator James Cryan is a Staff Scientist in LCLS Science Research and Development and PULSE and he will host much of the detector euv-based commissioning in his lab.
+James will also continue to lead the VMI-based approach as well as many of the experimental simulations.
+Both James and Peter will have regular interactions with the RA to help guide the work.
 
-The first RA/Project Scientist will be hired at the 75\% level with 25\% of his or her effort will be shared with closely related Accelerator R\&D projects.
-He or she will work primarily on the optical construction and execution of the experiments in the first two years for the interferometric timing effort.
-In addition, he or she will organize an initial preliminary benchmark test of attosecond angular streaking based on the Viefhaus CookieBox that will be borrowed from DESY.
-He or she will begin the effort of designing the CookieBox detector that will be used in the attosecond angular streaking effort.
-A second RA/Project Scientist will take over the CookieBox detector construction and will lead the attosecond streaking beamtime preparations in years 3-5.
-He or she will focus also on the optical design and fabrication responsibilities for the final dedicated CookieBox detector and required laser implementation.
+The RA will focus his or her on the design and integration of the chamber with the detector systems and will take responsibility for the detector construction.
+He or she will organize and lead benchmark tests of attosecond angular streaking at other facilities such as EuroXFEL and in the Cryan lab in building 40.
 
 We intend to recruit two graduate students from Stanford University to participate in the project.
 We will seek funding through student research fellowships and LCLS-sponsored student outreach programs.
+The PI has identified one such funded post-doctoral fellow, Audrey Therrien, who has needed expertise in charged particle simulations with GEANT4 as well as integrated circuit design.
+
 Related research by the PI has attracted numerous externally funded post-doctoral fellows and visiting scientists, most notably Wofram Helml (Marie Curie Foundation), Anton Lidahl (Wallenberg Foundation), and Markus Ilchen (Volkswagen Foundation).
-We expect these collaborative relasionships to continue.
+We expect these collaborative relationships to continue.
 In particular, the close collaboration with the Kienberger Group of TU Munich/MPQ Garching Germany is often financially supported through the Bavaria California Technology Center (BaCaTeC) program \cite{BaCaTeC}.
