@@ -1,3 +1,8 @@
+Given the MHz scale repetition rate of Table~\ref{lcls2specs} for the coming facility upgrade --- the Linac Coherent Light Source II (LCLS-II) --- such a measure-and-sort method requires that every XFEL shot be recorded, increasing the data load from the 10 TB/day of today to 100 PB/day.
+Such a load would require an enormous cost for developing the ultra-high duty-cycle area detectors and the corresponding network and storage infrastructure. 
+If instead one could use real-time information about the x-ray pulse shape to veto events where the pulse characteristics were not amenable to the physics being measured.
+Since there is a strong motivation to record attosecond resolution dynamics, we target the angular streaking method \cite{Nick2018} to provide high repetition rate veto and even sorting triggers that allow an enormous reduction in required data transfer by allowing on-board histogram updates prior to network transfer.
+
 We will in parallel develop a pulse retrieval pipeline that will reconstruct two-color x-ray pulses.
 
 Data handling is a key challenge for which we plan to use a FPGA-based machine learning inferencing.
