@@ -5,9 +5,10 @@
 \contentsline {section}{Objectives}{4}
 \contentsline {subsection}{Optimized Detector Array}{4}
 \contentsline {subsection}{Real time analysis}{6}
-\contentsline {section}{Schedule}{6}
-\contentsline {subsection}{Organization of Major Activities}{6}
+\contentsline {section}{Schedule}{7}
+\contentsline {subsection}{Organization of Major Activities}{7}
 \contentsline {subsection}{Responsibilities of key project personnel}{7}
+\contentsline {paragraph}{Expected publications}{8}
 \contentsline {section}{Appendix 1: Biographical Sketch}{9}
 \contentsline {section}{Appendix 2: Current and Pending Support}{12}
 \contentsline {section}{Appendix 3: Bibliography and References Cited}{13}

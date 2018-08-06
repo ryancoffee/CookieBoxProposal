@@ -1,0 +1,45 @@
+\begin{wraptable}[14]{r}{.5\linewidth}
+\vspace{-1.5\baselineskip}
+\caption{Soft x-ray conditions for LCLS-I and the high-repetition rate LCLS-II. \cite{lcls2_opportunities}}\label{lcls2specs}
+\begin{tabular}{lcr}
+\toprule
+Parameter & LCLS-I &LCLS-II\\
+\midrule
+Max rep.~rate & 120 Hz & 930 kHz\\
+Average power & 0.5 W & 200--900 W\\ 
+Pulse energy & 4 mJ & 0.1--5\footnotemark[1] mJ\\
+\shortstack{Photon energy} & 0.25--2 keV & 0.2--5 keV\\
+\shortstack{Arrival stability} & 100 fs rms& 20 fs rms\\
+\toprule
+\end{tabular}\\
+\footnotemark[1] $\geq$ 200 $\mu$J typically at reduced repetition rates.  
+Lower charge modes for short pulse operation can conserve peak power while allowing full repetition rate.
+\end{wraptable}
+
+The advent of x-ray free electron lasers (xFELs) has brought the ability to resolve ultrafast processes in molecular and material systems on their vibrational time and length scales \cite{Fritz2007,Katayama2013,Mariano2013,McFarland2014}.
+The next horizon is upon us: we will use attosecond x-ray pulses to control and interrogate the correlated electronic motion as we delve into the age of the molecular electronic movie.
+Given the importance of understanding such electronic flow in photo-excited systems (Fig.~\ref{fig::cederbaum}), there is a strong desire to drive electrons into concerted coherent motion \cite{Cederbaum2008,Biggs2012,Mukamel2013} and then probe the local electronic environment with time-resolved x-ray sepctroscopies.
+This has even led to direct funding of a major research effort focused specifically on attacking this regime with FEL sources \cite{ArtemFOA}.
+Opening the field of attoscience to the xFEL machine, one could even imagine an attosecond resolved extension to the two-dimensional resonant Auger electron spectrosopies of Ref.~\cite{Piancastelli2013}.
+
+\begin{wrapfigure}[20]{l}{.5\linewidth}
+\centerline{\includegraphics[width=.75\linewidth]{1-s2.0-S0009261407015436-main.terrainmap.eps}}
+\caption{\label{fig::cederbaum}Hole migration in PENNA molecule following photoionization in the ground neutral molecular configuration (top) versus the C$_2$-C$_2$ 20pm stretched configuration reproduced from Ref.~\cite{Cederbaum2008}.}
+\end{wrapfigure}
+
+One of the biggest challenges for the traditionally laser-based attosecond science community is the difficulty in producing significant pulse energy in the 200 eV -- 2 keV regime using high harmonic generation (HHG)\cite{Chen2014,Schmidt2016}.
+These sources are encroaching on this range \cite{Biegert2014,Zenghu2017}, however the intensities and repetition rates available at FEL sources like the LCLS-II (Table \ref{lcls2specs}) are driving the community to look toward all x-ray pump-probe. 
+There have been numerous schemes proposed for developing the attosecond capability of x-ray FEL facilities \cite{Ding2009,Xiang2009} with a particular push funded directly by the Office of Basic Energy Science aimed at LCLS-II implementation \cite{Marinelli2016,xLEAP}.
+
+
+Achieving the full capability of attosecond x-ray laser science will require the diagnosis and control of the x-ray spectral phase.
+The development of temporally shaped x-ray FEL pulses would not only facilitate attosecond pulse generation but also a number of multi-pulse non-linear techniques.
+A continued progress on this front \cite{Lutman13_twocolor,Marinelli13_twocolor,Allaria2014,Marinelli2015,Prince2016,Lutman2016,Marinelli2016} will require full spectral phase, amplitude and polarization characterization as recently demonstrated in Ref.~\cite{Nick2018}.
+We therefore propose a single-shot diagnostic that reports the full temporal intensity, wavelength, and polarization distributions with $\sim$150 attoseconds resolution at the highest repetition rates, limited only by the optical laser repetition rate that is used for the streaking drive laser.
+
+We restrict ourselves to two fundamental objectives:
+\begin{enumerate}
+\item \label{obj::detector} We will perform the necessary reasearch and development required to eventually deliver an optimized angular array of electron Time-of-Flight spectrometers.
+\item \label{obj::analysis} We will co-develop the requisite algorithms and machine learning compliments together with the detector electronics such in odred to optimally match the real-time analysis routines with detector electronics and computing hardware that push the tenchnology envelope.
+\end{enumerate}
+
