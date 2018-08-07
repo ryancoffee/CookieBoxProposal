@@ -1,11 +1,4 @@
 
-
-
-
-
-
-
-
 There is increasing momentum in the development of spectro-temporally shaped x-ray FEL pulses \cite{eehg2009,Lutman13_twocolor,Marinelli13_twocolor,Allaria2014,Marinelli2015,Hemsing2016,Prince2016,Lutman2016,LutmanFreshSlice2016,Marinelli2016} in response to the rising tide of demand \cite{Cederbaum2008,Mukamel2007,Biggs2012,Mukamel2013,4WaveMixing,TIGER2015,ArtemFOA}.
 The predominant method to characterize such novel temporal profiles is based on an x-band transverse accelerating cavity (XTCAV) \cite{xtcav2014} whereby the spent electron bunch is deflected horizontally, streaked in time by the phase of the transverse accelerating field.
 A bending magnet then deflects this time-streaked beam vertically proportional to the energy.
@@ -14,7 +7,8 @@ This technique has been a critical tool for developing the recent x-ray FEL puls
 Unfortunately, it indirectly measures the x-ray temporal profile by identifying the imprint of lasing on the electron bunch.
 Furthermore, barring a superconducting upgrade to the x-band cavity, the XTCAV can only run at 120 Hz, providing only intermittent information at best.
 
-\begin{wrapfigure}[10]{r}{.65\linewidth}
+\begin{figure}[b]
+%\begin{wrapfigure}[10]{r}{.65\linewidth}
 \vspace{-\baselineskip}
 \centerline{
 	\includegraphics[width=\linewidth]{naturePhoton_NickWolfi.clockfig.eps}
@@ -24,7 +18,8 @@ Furthermore, barring a superconducting upgrade to the x-band cavity, the XTCAV c
 	\label{streakingschematic} 
 	Schematic of angular photo-electron streaking. \cite{Nick2018}
 }
-\end{wrapfigure}
+%\end{wrapfigure}
+\end{figure}
 
 Since the inception of streaking as a pulse reconstruction method \cite{Zenghu2005,KellerAngularStreaking} there have been great recent gains in diagnosing laser-based pulses that encroach on the soft x-ray regime \cite{Biegert2016,WornerSci2017,Worner2017}.
 Photo-electron streaking, a direct interaction, has the capability to measure the instantaneous temporal structure of x-ray pulses \cite{Hentschel2001}.
@@ -44,10 +39,10 @@ Pulse-to-pulse variations at an FEL require single-shot measurements much like t
 Although we have explored such a single-shot VMI solution for 120Hz operation \cite{Siqi2018}, the requirement of a two-dimensional detector precludes high repetition rates. 
 Furthermore, the single resolution window of the VMI precludes its use for the kinds of novel multi-color pulses we have come to expect from LCLS.
 
-\begin{wrapfigure}[18]{l}{.5\linewidth}
-\vspace{-\baselineskip}
-\centerline{\includegraphics[width=.9\linewidth]{naturePhoton_NickWolfi.spectrograms.eps}}
-\vspace{-1\baselineskip}
+\begin{wrapfigure}[22]{l}{3.5in}
+\vspace{-0.5\baselineskip}
+\centerline{\includegraphics[width=\linewidth]{naturePhoton_NickWolfi.spectrograms.eps}}
+\vspace{-0.5\baselineskip}
 \caption{\label{fig::retrievals}X-ray pulse shape retrievals reproduced from Ref.~\cite{Nick2018}.}
 \end{wrapfigure}
 As an alternative, we repurposed what was originally considered for x-ray FEL polarimeter \cite{Markus2014,Allaria2014,Mazza2014,Lutman2016} to measure the angularly streaked photo-electron spectra with an angular array of 16 electron Time-of-Flight (eTOF) detectors as depicted in Fig.~\ref{streakingschematic} \cite{Nick2018}.

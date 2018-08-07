@@ -1,17 +1,17 @@
 \contentsline {section}{Project Summary}{0}
 \contentsline {section}{Introduction}{1}
 \contentsline {subsection}{Streaking for X-ray Pulse Reconstruction}{2}
-\contentsline {subsection}{Attosecond pump-probe experiments}{3}
+\contentsline {subsection}{Attosecond pump-probe experiments}{4}
 \contentsline {section}{Objectives}{4}
 \contentsline {subsection}{Optimized Detector Array}{4}
 \contentsline {subsection}{Real time analysis}{6}
 \contentsline {section}{Scope and Schedule}{7}
 \contentsline {subsection}{Organization of Major Activities}{8}
 \contentsline {subsection}{Responsibilities of key project personnel}{8}
-\contentsline {paragraph}{Expected publications}{8}
+\contentsline {paragraph}{Expected publications}{9}
 \contentsline {section}{Appendix 1: Biographical Sketch}{10}
-\contentsline {section}{Appendix 2: Current and Pending Support}{13}
-\contentsline {section}{Appendix 3: Bibliography and References Cited}{14}
-\contentsline {section}{Appendix 4: Facilities and Other Resources}{15}
-\contentsline {section}{Appendix 5: Equipment}{16}
-\contentsline {section}{Appendix 6: Data Management Plan}{17}
+\contentsline {section}{Appendix 2: Current and Pending Support}{14}
+\contentsline {section}{Appendix 3: Bibliography and References Cited}{15}
+\contentsline {section}{Appendix 4: Facilities and Other Resources}{16}
+\contentsline {section}{Appendix 5: Equipment}{17}
+\contentsline {section}{Appendix 6: Data Management Plan}{18}
