@@ -2,13 +2,13 @@
 \contentsline {section}{Introduction}{1}
 \contentsline {subsection}{Angular streaking}{3}
 \contentsline {subsection}{Attosecond pump-probe}{4}
-\contentsline {section}{Objectives}{7}
-\contentsline {subsection}{Optimized Detector Array}{7}
-\contentsline {subsection}{Real time analysis}{9}
-\contentsline {section}{Organization of Major Activities}{10}
-\contentsline {subsection}{Scope}{10}
-\contentsline {subsection}{Schedule}{11}
-\contentsline {paragraph}{Responsibilities of key project personnel}{12}
+\contentsline {section}{Objectives}{6}
+\contentsline {subsection}{Optimized Detector Array}{6}
+\contentsline {subsection}{Real time analysis}{8}
+\contentsline {section}{Organization of Major Activities}{9}
+\contentsline {subsection}{Scope}{9}
+\contentsline {subsection}{Schedule}{10}
+\contentsline {paragraph}{Responsibilities of key project personnel}{11}
 \contentsline {paragraph}{Expected publications}{12}
 \contentsline {section}{Appendix 1: Biographical Sketch}{13}
 \contentsline {section}{Appendix 2: Current and Pending Support}{17}
