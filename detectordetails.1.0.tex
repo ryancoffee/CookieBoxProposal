@@ -1,10 +1,10 @@
-\begin{wrapfigure}[25]{l}{.45\linewidth}
+\begin{wrapfigure}[24]{l}{.45\linewidth}
 \vspace{-1\baselineskip}
 \centerline{\includegraphics[width=.8\linewidth]{applsci-08-01039-g005-550.eps}}
 \centerline{\includegraphics[width=.8\linewidth]{applsci-08-01039-g006-550.eps}}
 \vspace{-1\baselineskip}
-\caption{\label{fig::thomasfigs}Reproduced from Ref.~\cite{Feurer2018}. (upper) Xray pulse retrieval error increases dramatically for resolutions poorer than about 0.4\%.  
-(lower) The retrieval also fails when the angular sampling falls below 8 detectors.}
+\caption{\label{fig::thomasfigs}Reproduced from Ref.~\cite{Feurer2018}. (upper) Xray pulse retrieval error versus \% energy resolution.  
+(lower) Retrieval error versus angular sampling.}
 \end{wrapfigure}
 
 The technical requirements in order to achieve the pulse retrievals as needed for accuarate reconstruction are not trivial to achieve.
@@ -14,16 +14,20 @@ Modeled after the original Jens Viefhaus, so called ``Cookie Box'' design, we pr
 
 Preliminary results of Ref.~\cite{Nick2018} were based on the original 16-fold detector array afforded 1~eV eTOF spectrometer resoltuion when working in the required single-shot current mode, not the synchrotron style high resolution counting mode.
 From Fig.~\ref{fig::thomasfigs}(upper) we can see that the energy resolution for the streaked photoelectrons should ideally be in the sub~0.25\% range.
-We therefore are targeting detectors that will have an energy resolution of 0.25~eV at up to 100~eV electron kinetic energy above the retardation voltage.
-The retardation voltage will allow us to view even high energy electrons, including Auger electrons, with the same high resolution.
-We note that the fine tuning of the sorts of novel FEL modes that allow for attosecond FEL experiments typically require a diagnostic of such 0.25~eV resolution of the spectral sub-spikes \cite{AlbertoPrivate}.
+We therefore are targeting 0.5~m long eTOF detectors to populate the array which we expect to give an energy resolution of 0.25~eV at up to 100~eV electron kinetic energy above the retardation voltage, based on an estiamted comparion to existing detectors as shown in Fig.~\ref{fig::detectorcompare}.
+\begin{wrapfigure}[15]{l}{2.5in}
+\centerline{\includegraphics[width=\linewidth]{plotting.tofs.compare.forproposal.eps}}
+\vspace{-0.5\baselineskip}
+\caption{\label{fig::detectorcompare}Detector resolution versus length comparison. }
+\end{wrapfigure}
+We note that the fine tuning of the sorts of novel FEL modes that allow for attosecond FEL experiments typically require also such 0.25~eV resolution of the spectral sub-spikes \cite{AlbertoPrivate}.
 
 The resolution in pulse reconstruction depends also on the number of angular sample points per optical cycle.
 In Fig.~\ref{fig::thomasfigs}(lower) we see a clear prescription that the angular streaking pattern should be sampled at least along 6--8 angular sample points.
 The diminishing returns for adding more detector assemblies drives the design to 16 angles which is expected to provide a two-fold over-sampling of the angular dimension.
 Furthermore, by shifting the dressing laser frequency toward the near-infrared we can further improve the temporal resolution.
 Based on Refs.~\cite{lcls2_opportunities,Cederbaum2008,Biggs2012,Mukamel2013} we expect that much of the x-ray pulse characterization needs will lie in the sub-10 fs regime.
-\begin{wrapfigure}[18]{r}{.45\linewidth}
+\begin{wrapfigure}[18]{r}{3in}
 \vspace{-0.5\baselineskip}
 \centerline{\includegraphics[trim={0 0 0 0pt},width=\linewidth]{jamessim.eps}}
 \vspace{-0.5\baselineskip}
@@ -38,9 +42,9 @@ When diagnosing closely separated double pulses, the angular acceptance of the e
 We plan to optimize this angular acceptance such that we relax slightly the collection for the sake of preserving the resolution.
 We were able to reduce the sample density by 10-fold in Ref.~\cite{Nick2018} to avoid the onset of space-charge blurring of the streaking resolution.
 We expect that we can sacrifice a factor of 6 in signal in order to relax the angular collection of the eTOFs.
-This reduced collection will be partially compensated by a new chamfered-pore design for the microchannel plates that improves collection efficiency.
+This reduced collection will be partially compensated by a new funnel-pore design for the top microchannel plate in the two-plate stack \cite{funnelMCPcompare2018}.
 
-\begin{wrapfigure}[18]{l}{.5\linewidth}
+\begin{wrapfigure}[15]{r}{3in}
 \vspace{-1\baselineskip}
 \centerline{
 	%\includegraphics[width=\linewidth]{CuL_SXR_HorzPolPlanHybrid_K.eps}
