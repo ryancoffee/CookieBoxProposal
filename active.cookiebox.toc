@@ -5,13 +5,14 @@
 \contentsline {section}{Objectives}{4}
 \contentsline {subsection}{Optimized Detector Array}{4}
 \contentsline {subsection}{Real time analysis}{6}
-\contentsline {section}{Scope and Schedule}{7}
-\contentsline {subsection}{Organization of Major Activities}{8}
-\contentsline {subsection}{Responsibilities of key project personnel}{8}
-\contentsline {paragraph}{Expected publications}{9}
-\contentsline {section}{Appendix 1: Biographical Sketch}{10}
-\contentsline {section}{Appendix 2: Current and Pending Support}{14}
-\contentsline {section}{Appendix 3: Bibliography and References Cited}{15}
-\contentsline {section}{Appendix 4: Facilities and Other Resources}{16}
-\contentsline {section}{Appendix 5: Equipment}{17}
-\contentsline {section}{Appendix 6: Data Management Plan}{18}
+\contentsline {section}{Organization of Major Activities}{7}
+\contentsline {subsection}{Scope}{7}
+\contentsline {subsection}{Schedule}{8}
+\contentsline {paragraph}{Responsibilities of key project personnel}{9}
+\contentsline {paragraph}{Expected publications}{10}
+\contentsline {section}{Appendix 1: Biographical Sketch}{11}
+\contentsline {section}{Appendix 2: Current and Pending Support}{15}
+\contentsline {section}{Appendix 3: Bibliography and References Cited}{16}
+\contentsline {section}{Appendix 4: Facilities and Other Resources}{17}
+\contentsline {section}{Appendix 5: Equipment}{18}
+\contentsline {section}{Appendix 6: Data Management Plan}{19}

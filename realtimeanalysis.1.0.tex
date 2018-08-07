@@ -15,13 +15,17 @@ We plan to use the full fidelity ground truth set for training and validating a 
 Only very small data of the retrieved pulse would be transferred to remote data recording nodes along with intermittent high fidelity shots for continually populating the validation and re-training sets.
 We will use simulations of angular streaking from expected FEL pulses, together with the detector array simulations used for the design modelling, to iterate on the detector hardware configurations and the analysis pipeline from electronics to inference output.
 
-\begin{comment}
 The inference model will be trained based on a transfer learning paradigm whereby the central hidden layers, e.g. the simulation trained core layers, will be optimized to recover x-ray pulse shapes (ground truth) given simulated angular streaking results.
 Data handling is a key challenge for which we plan to use a FPGA-based machine learning inferencing.
 The next step of the model training then adds a thin surface set of layers at the input side that is connected to the raw data of the detector.
 Also, we will connect via a similarly thin set of layers that connect the preliminary output to the now data-based pulse reconstructions.
 We expect that such an architecture will preserve the physics of angular streaking as contained in the simulations, while also incorporating the raw sensor calibrations as well as adjusting to any remaining systematic errors in the retrieval interpretation.
-\end{comment}
 
+In addition to the detector design in this preparation phase, we will use existing data as well as simulations to build a repository of example waveforms with realistic expectations for the point-spread functions.  
+We will use this simulated data to test both the time-domain ptychography method of pulse reconstruction as well as a machine learning method for fast predictive inference.
+By performing both algorithms on the same simulations, we can benchmark the pre-analysis that will ultimately be used to enhance resolution in the retrieval while maintaining the very high throughput needed for real-time analysis.
 
-
+This chain of analysis, be it ptychography or a machine learning inference model or, more likely, an interwoven fusion of the two, will be compiled for FPGA deployment.  
+By deploying to FPGA, we will only have need to transfer the reconstructed x-ray pulse description rather than each of the individual raw waveforms. 
+We note that preliminary results indicate that, although the ptychographic reconstruction is computationally expensive, a preliminary artificial neural network inference model has been trained on simulations and performs with micro-second latency.  
+Based on our close collaboration with the Stanford CS/EE group of Kunle Olukotun, we expect such a solution could be deployed to FPGA and run in streaming inference mode.

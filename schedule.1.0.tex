@@ -1,4 +1,3 @@
-\subsection*{Organization of Major Activities}\addcontentsline{toc}{subsection}{Organization of Major Activities}
 %\begin{table}
 %\caption{\label{tab::schedule} Timeline of the R\&D schedule. Project Years (PY) are sub-divided into 6 month blocks. }
 \small
@@ -18,8 +17,15 @@ Develop algorithms& Train ML on sims & Transfer Learning & Benchmark latency\\
 %\end{table}
 \normalsize
 
-
 \paragraph*{Project Year 1}
+In the beginning of Project Year 1, the two prototype detector electronics, the MCP assemblies, will be ordered.
+The bench testing of the two prototype detectors will test for the detector cross-talk interactions and ringing.
+We will also purchase LCLS-II compatible Digitizer electronics that represent an upgrade to the current expectations.
+These digitizers will be chosen based on the simulated waveforms and the measured impulse response of the MCP assemblies.
+The signal testing will also provide further insight into the actual signal processing that will be needed in the final build out.  
+The vacuum chamber chamber design will be finalized for purchasing. 
+The detectors will be installed into the final design vacuum chamber since the detectors mate directly into the chamber.  
+Since fringe electric fields may compromise the final electron energy resolution, along with stray magnetic fields, we must test the prototype detector pair for cross-talk and ringing in the final chamber environment.  
 \begin{itemize}
 \item Test 2$\mu$m streaking with attosecond pulses from LCLS-I using Axial VMI \cite{Siqi2018}.
 \item Design detectors for array, use existing data to develop algorithms for streaming analysis.
@@ -29,6 +35,14 @@ Develop algorithms& Train ML on sims & Transfer Learning & Benchmark latency\\
 \end{itemize}
 
 \paragraph*{Project Year 2}
+In the beginning of Project Year 2, we will partially complete the detector array with an additional 4 detectors assemblies and Digitizer combinations.
+With a total of 6 modules, we will be able to test the multi-retardation window scheme and its impact on also measuring a third, Auger channel.
+This will allow a demonstration of the design performance for simultaneous reconstruction of two-color x-ray pulses along with time-resolved Auger electron spectroscopy.
+We will use the 120Hz machine running into the soft x-ray undulators to demonstrate the spectral range of the detectors and the resolution.  
+We will also develop the calibration protocol which will then be automated as the system becomes integrated into the LCLS-II controls system and DAQ.  
+We note that expected configuration of an ML-enabled data reduction node is currently being designed with this detector as one of the use-cases for on-board streaming analysis.  
+We will use Phase 2 to work directly with the group of Jana Thayer to ensure full compatibility with the LCLS-II Data Reduction Pipeline (DRP).  
+By Summer of 2020, we expect the system would be ready for full deployment, just in time to receive LCLS-II, high repetition rate pulses.
 \begin{itemize}
 \item Implement on-board FPGA processing and demonstrate calibration learning.
 \item Optimize FPGA usage and benchmark SoC solution compared to larger ML-server solution.
@@ -36,7 +50,7 @@ Develop algorithms& Train ML on sims & Transfer Learning & Benchmark latency\\
 \item Install array on LCLS-II and benchmark resolution with XAFS using 3 $\mu$m laser dressing of N$_2$O.
 \end{itemize}
 
-\subsection*{Responsibilities of key project personnel}\addcontentsline{toc}{subsection}{Responsibilities of key project personnel}
+\paragraph*{Responsibilities of key project personnel}\addcontentsline{toc}{paragraph}{Responsibilities of key project personnel}
 The PI will be responsible for leading the design effort to ensure a fundamentally integrated system, from chamber design and detector hardware to signal readout and waveform analysis.
 He will also be principally concerned with the pulse reconstruction algorithm and data analysis pipeline.
 

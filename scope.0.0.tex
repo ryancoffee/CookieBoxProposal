@@ -1,30 +1,16 @@
-The scope of this project is the Research and Development needed to produce an angular array of 16 novel electron Time-of-Flight spectrometers.  
-The specifications for this angular array are set by the needs for the reliable reconstruction of both SASE x-ray pulses and x-ray pulse pairs of complicated multi-color spectrum, polarization, and temporal structure; more succinctly, the polarization resolving Time-Energy distribution.
-The aim for the new design is to achieve the 0.25\% resolution while retaining the ability for strong retardation fields without significantly sacrificing the collection efficiency.  
+The scope of this project is the Research and Development needed to design and produce an electron spectrometer system that is capable of reconstructing the x-ray pulse shapes with attosecond time resolution, 0.25~eV spectral resolution, and sub-pulse polarization resolution.
+It should be function as a single-shot diagnostic for multi-pulse xFEL configurations that also span hundreds of eV photon energy difference.
+Motivated by the recent experimental success of Ref.~\cite{Nick2018} and further by the pulse reconstruction efforts of Refs.~\cite{Siqi2018,Feurer2018}, we target an angular array of newly designed electron Time-of-Flight spectrometers.  
+The project will deliver a design that meets specifications for each eTOF spectrometer, including mutual interaction considerations in the angular array.
+These specifications are set by the needs for reliable reconstruction of both SASE and x-ray pulse pairs of complicated polarization, multi-color spectrum, and temporal structure; more succinctly, the polarization resolving Time-Energy distribution.
+
+The project will also deliver an integrated data pipeline plan.
+We will use the simulations not only for designing the optimised detectors, but also to develop in parallel the optimized analysis stream.  
+From simulations we will benchmark the retrieval algorithms of Refs.~\cite{Nick2018,Siqi2018,Feurer2018} against the new specifications of higher energy resolution over wider energy windows.
+We will match not only the electronics to the expected signals, but also the on-board pre-analysis in the overall data pipeline.
+Since we target at least 100~kfps analysis throughput, ideally with microsecond level latency, we expect the need to use high-speed machine learning inference.
+Therefore we will integrate the inferencing with the early stages of the Digitization and FPGA-based signal processing.
+The output of the inference engine is expected to inform user detectors how to route buffered data, either into sorted order for histogram or intelligent veto.
 
 
-
-In addition to the detector design in this preparation phase, we will use existing data as well as simulations to build a repository of example waveforms with realistic expectations for the point-spread functions.  
-We will use this simulated data to test both the time-domain ptychography method of pulse reconstruction as well as a machine learning method for fast predictive inference.
-By performing both algorithms on the same simulations, we can benchmark the pre-analysis that will ultimately be used to enhance resolution in the retrieval while maintaining the very high throughput needed for real-time analysis.
-
-In the beginning of Phase 1, the two prototype detectors will be ordered along with the final design vacuum chamber. 
-The bench testing of the two prototype detectors will test for the detector cross-talk—a major impediment with the design used in Ref. ii—and for detector ringing, e.g. optimizing that point-spread function.  
-The detectors will be installed into the final design vacuum chamber since the detectors mate directly into the chamber.  
-Since fringe electric fields may compromise the final electron energy resolution, along with stray magnetic fields, we must test the prototype detector pair for cross-talk and ringing in the final chamber environment.  
-After confirming the specifications of the protoype detectors, and any modifications required, we will then finalize the angular array with the remaining 14 eToF modules.
-
-The signal testing in Phase 1 will also provide early insight into the actual signal processing that will be needed in the final build out.  
-Therefore, we will use this to develop in parallel the optimized analysis stream.  
-This chain of analysis—be it ptychography or a machine learning inference model or, more likely, an interwoven fusion of the two—will be compiled for FPGA deployment.  
-By deploying to FPGA, we will only have need to transfer the reconstructed x-ray pulse description rather than each of the individual raw waveforms. 
-We note that preliminary results indicate that, although the ptychographic reconstruction is computationally expensive, a preliminary artificial neural network inference model has been trained on simulations and performs with micro-second latency.  
-Based on our close collaboration with the Stanford CS/EE group of Kunle Olukotun, we expect such a solution could be deployed to FPGA and run in streaming inference mode.
-
-In the beginning of Phase 2, we will complete the detector array and begin demonstration of its capability when the LCLS comes back.  
-We will use the 120Hz machine running into the soft x-ray undulators to demonstrate the spectral range of the detectors and the resolution.  
-We will also develop the calibration protocol which will then be automated as the system becomes integrated into the LCLS-II controls system and DAQ.  
-We note that expected configuration of an ML-enabled data reduction node is currently being designed with this detector as one of the use-cases for on-board streaming analysis.  
-We will use Phase 2 to work directly with the group of Jana Thayer to ensure full compatibility with the LCLS-II Data Reduction Pipeline (DRP).  
-By Summer of 2020, we expect the system would be ready for full deployment, just in time to receive LCLS-II, high repetition rate pulses.
 
