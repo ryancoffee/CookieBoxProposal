@@ -1,18 +1,17 @@
-\contentsline {section}{Project Summary}{0}
 \contentsline {section}{Introduction}{1}
-\contentsline {subsection}{Angular streaking}{3}
-\contentsline {subsection}{Attosecond pump-probe}{4}
-\contentsline {section}{Objectives}{6}
-\contentsline {subsection}{Optimized Detector Array}{6}
-\contentsline {subsection}{Real time analysis}{8}
-\contentsline {section}{Organization of Major Activities}{9}
-\contentsline {subsection}{Scope}{9}
-\contentsline {subsection}{Schedule}{10}
-\contentsline {paragraph}{Responsibilities of key project personnel}{11}
-\contentsline {paragraph}{Expected publications}{12}
-\contentsline {section}{Appendix 1: Biographical Sketch}{13}
-\contentsline {section}{Appendix 2: Current and Pending Support}{17}
-\contentsline {section}{Appendix 3: Bibliography and References Cited}{18}
-\contentsline {section}{Appendix 4: Facilities and Other Resources}{19}
-\contentsline {section}{Appendix 5: Equipment}{20}
-\contentsline {section}{Appendix 6: Data Management Plan}{21}
+\contentsline {subsection}{Angular streaking}{2}
+\contentsline {subsection}{Attosecond pump-probe}{3}
+\contentsline {section}{Objectives}{5}
+\contentsline {subsection}{Optimized Detector Array}{5}
+\contentsline {subsection}{Real time analysis}{7}
+\contentsline {section}{Organization of Major Activities}{8}
+\contentsline {subsection}{Scope}{8}
+\contentsline {subsection}{Schedule}{9}
+\contentsline {paragraph}{Responsibilities of key project personnel}{10}
+\contentsline {paragraph}{Expected publications}{10}
+\contentsline {section}{Appendix 1: Biographical Sketch}{12}
+\contentsline {section}{Appendix 2: Current and Pending Support}{16}
+\contentsline {section}{Appendix 3: Bibliography and References Cited}{17}
+\contentsline {section}{Appendix 4: Facilities and Other Resources}{18}
+\contentsline {section}{Appendix 5: Equipment}{19}
+\contentsline {section}{Appendix 6: Data Management Plan}{20}

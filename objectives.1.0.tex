@@ -1,3 +1,6 @@
+\subsection*{Optimized Detector Array}\addcontentsline{toc}{subsection}{Optimized Detector Array}
+%\input{active.detectordetails.tex}
+
 \begin{wrapfigure}[26]{r}{3in}
 \vspace{-3\baselineskip}
 \centerline{\includegraphics[width=\linewidth]{applsci-08-01039-g005-550.eps}}
@@ -55,19 +58,36 @@ We were able to reduce the sample density by 10-fold in Ref.~\cite{Nick2018} to 
 We expect that we can sacrifice a factor of 6 in signal in order to relax the angular collection of the eTOFs also by partially compensating for this loss by using new funnel-pore microchannel plates \cite{funnelMCPcompare2018}.
 
 
-\begin{wrapfigure}[18]{l}{3in}
+We are designing for a novel configuration whereby individual detectors in the eTOF array can have vastly different retardation voltages.
+Motivated by the great progress in multi-color FEL modes \cite{Lutman13_twocolor,Marinelli13_twocolor,Allaria2014,Marinelli2015,Prince2016,Lutman2016,Marinelli2016,Lutman2016FreshSlice}, we will capitalize on the two-fold over sampling in the angular dimension to accommodate extreme color separations between multi-pulses.
+Figure~\ref{fig::sxu_K} shows that the soft x-ray undulator (SXU) for LCLS-II will be capable of K values from 2 to 5 that could provide two-color pulses with one pulse below the carbon edge and the other above the oxygen edge.
+We plan for tests of such a novel mode by demonstrating interleaved retardations used to measure the carbon and the oxygen Auger electron spectra simultaneously with high resolution as early as spring 2020.
+
+
+
+\subsection*{Real time analysis}\addcontentsline{toc}{subsection}{Real time analysis}
+%\input{active.realtimeanalysis.tex}
+\begin{wrapfigure}[20]{r}{3.5in}
 \vspace{-0.5\baselineskip}
 \centerline{\includegraphics[trim={0 0 0 0pt},width=\linewidth]{jamessim.eps}}
 \vspace{-0.5\baselineskip}
 \caption{\label{fig::jamessim}Simulation of two attosecond x-ray pulses separated by 4~fs dressed by a 4~$\mu$m streaking field, courtesy J.~Cryan.}
 \end{wrapfigure}
 
-We are designing for a novel configuration whereby individual detectors in the eTOF array can have vastly different retardation voltages.
-Motivated by the great progress in multi-color FEL modes \cite{Lutman13_twocolor,Marinelli13_twocolor,Allaria2014,Marinelli2015,Prince2016,Lutman2016,Marinelli2016,Lutman2016FreshSlice}, we will capitalize on the two-fold over sampling in the angular dimension to accommodate extreme color separations between multi-pulses.
-Figure~\ref{fig::sxu_K} shows that the soft x-ray undulator (SXU) for LCLS-II will be capable of K values from 2 to 5 that could provide two-color pulses with one pulse below the carbon edge and the other above the oxygen edge.
-We plan for tests of such a novel mode by demonstrating interleaved retardations used to measure the carbon and the oxygen Auger electron spectra simultaneously with high resolution as early as spring 2020.
 
-\begin{wrapfigure}[16]{r}{3.5in}
+Given the MHz scale repetition rate of Table~\ref{lcls2specs} for LCLS-II, a measure-and-sort method that required every XFEL shot be recorded would increase the data load from the 10 TB/day of today to 100 PB/day.
+Such a load would require an enormous cost for developing the ultra-high duty-cycle area detectors and the corresponding network and storage infrastructure. 
+If instead one could use real-time information about the x-ray pulse shape, then one could veto events where the pulse characteristics were not amenable to the physics being measured.
+Furthermore, one could allow for on-board histogram updates in a memory buffer that could collate the real-time sorted results prior to network transfer.
+Such a vision fuels our strong motivation to not only provide high repetition rate veto, but also event rate, low-latency sorting triggers.
+
+The on-board analysis of the data is a challenging bottleneck in the angular streaking scheme.
+The raw data in angular streaking is the digitized waveform spanning about 500~ns of record length with a sample frequency of ideally about 10GS/s, one waveform for each of the 16 detectors.
+Transferring and writing this data would require nearly 160~GBps steady-state continuous feed.
+We therefore require that the analysis occur ideally directly in combination with the digitization.
+All together though, this analysis would be comparable to analyzing one $256\times256$ 10 bit deep image every microsecond.
+
+\begin{wrapfigure}[18]{r}{3.5in}
 \vspace{-1\baselineskip}
 \centerline{
 	%\includegraphics[width=\linewidth]{CuL_SXR_HorzPolPlanHybrid_K.eps}
@@ -77,4 +97,23 @@ We plan for tests of such a novel mode by demonstrating interleaved retardations
 \caption{\label{fig::sxu_K} Soft x-ray undulator tuning range. \cite{HeinzDieter_SXU_twocolor}
 	}
 \end{wrapfigure}
+
+Detailed in Ref.~\cite{Nick2018}, we iteratively account for intensity in the polar representation of the angular photo-electron spectrum.
+This so called ``PacMan'' routine as well as a similar methods \cite{Thomas2015,Siqi2018,HJWorner2018} and certainly ``Attoclock Ptychography'' \cite{Thomas2018} are computationally expensive and are not likely to allow MHz or even 100 kHz data throughput.
+They certainly will not achieve the desired microsecond scale latency for providing sort and veto triggers.
+We therefore plan to reserve such computationally expensive methods for the generation of so-called ``ground truth'' x-ray pulse shapes for a sub-set of full fidelity raw data.
+
+We plan to use the ground truth set for training and validating a low-latency inference matrix solution that could be implemented as a series of FPGA-based on-board matrix multiplications.
+Only very small data of the retrieved pulse would be transferred to remote data recording nodes along with intermittent high fidelity shots for continually populating the validation and re-training sets.
+We will use simulations of angular streaking from expected FEL pulses, together with the detector array simulations used for the design modelling, to iterate on the detector hardware configurations and the analysis pipeline from electronics to inference output.
+We will use existing data to build a repository of example waveforms with realistic expectations for the eTOF point-spread functions.  
+
+The inference model will be trained based on a transfer learning paradigm whereby the central hidden layers, e.g. the simulation trained layers, will be optimized to recover x-ray pulse shapes given simulated angular streaking results.
+The next step of the model training then adds a thin surface set of layers at the input side that is connected to the raw data of the detector.
+We expect that such an architecture will preserve the physics of angular streaking as contained in the simulations, while also incorporating the raw sensor calibrations as well as adjusting to any remaining systematic errors in the retrieval interpretation.
+By performing different algorithms on the same data, we can benchmark the pre-analysis that will ultimately be used to enhance resolution in the retrieval while maintaining the very high throughput needed for real-time analysis.
+
+This chain of analysis will be compiled for FPGA deployment.  
+By deploying to FPGA, we will only need to transfer the reconstructed x-ray pulse description rather than each of the individual raw waveforms. 
+We will leverage our close collaboration with the Stanford CS/EE group of Kunle Olukotun, in particular though a shared Graduate Student Fellow, to deploy the analysis chain to FPGA as a very high throughput ($10^6$ Fps) and low latency ($\sim10~\mu$s) streaming inference engine.
 
