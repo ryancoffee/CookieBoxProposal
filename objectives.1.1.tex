@@ -10,7 +10,7 @@
 (lower) Retrieval error versus angular sampling.}
 \end{wrapfigure}
 
-The technical requirements that enable pulse retrievals for accuarate reconstruction are not trivial to achieve.
+The technical requirements that enable pulse retrievals for accurate reconstruction are not trivial to achieve.
 Pulse-to-pulse variations at an FEL require single-shot measurements much like the velocity map imaging (VMI) \cite{VrakkingRSI} extension of attosecond angular streaking \cite{attoclockVMI2013}.
 Although we have explored such a single-shot VMI solution for 120~Hz operation \cite{Siqi2018}, its requirement of a two-dimensional area detector precludes its use for the high repetition rates expected. 
 Furthermore, the single resolution window of the VMI precludes its use for the kinds of novel multi-color pulses we have come to expect from LCLS \cite{Lutman13_twocolor,Marinelli13_twocolor,Marinelli2015,Lutman2016,LutmanFreshSlice2016}.
@@ -18,7 +18,7 @@ We are therefore designing toward a single-shot diagnostic that reports the full
 We further require a two-fold over sampling in the angular dimension in order to fully characterize even multi-pulses (Fig.~\ref{fig::2color2polResults}) \cite{Lutman2016,LutmanFreshSlice2016}.
 Modeled after the original so called ``Cookie Box'' design of Jens Viefhaus, we propose a main chamber that accepts micro-channel plate based electron detectors in a 16-fold symmetric angular array.
 
-Preliminary results of Ref.~\cite{Nick2018} were based on 1~eV eTOF spectrometer resoltuion when working in the required single-shot current mode (Viefhaus points in Fig.~\ref{fig::detectorcompare}.
+Preliminary results of Ref.~\cite{Nick2018} were based on 1~eV eTOF spectrometer resolution when working in the required single-shot current mode (Viefhaus points in Fig.~\ref{fig::detectorcompare}.
 We note that used in counting mode as at a synchrotron, higher resolution can be achieved by electron event edge detection, but the FEL use case requires a direct spectral readout with the MCP electronics run in ``current'' mode with the voltage waveform being digitized as a single shot spectrum.
 This sets the resolution not by how well one can locate the center of the impulse response waveform, but rather the actual width of that impulse response waveform.
 This motivates us to design for the sharpest achievable response from the MCP assembly and that we digitize that waveform with appropriately high sampling over a sufficiently long temporal span.
@@ -27,9 +27,9 @@ The current target of 400~ps FWHM for the MCP response then pushes us to design 
 Although the final decision on retrieval algorithm is a subject of active research, we use so called ``Attoclock Ptychography'' \cite{Feurer2018} to inform our specifications for spectral and angular resolution.
 From Fig.~\ref{fig::thomasfigs}(upper) we can see that the energy resolution for the streaked photoelectrons should ideally be in the sub~0.25\% range.
 The fine tuning of the sorts of novel FEL modes that allow for attosecond \cite{xLEAP} and two-color \cite{LutmanFreshSlice2016} FEL experiments typically also require 0.25~eV resolution \cite{AlbertoPrivate}.
-We are therefore targeting 0.5~m long eTOF spectrometers which we expect to give an energy resolution of 0.25~eV at up to 100~eV electron kinetic energy above the retardation voltage, based on an estiamted comparion of existing detectors (points) to the simulations (line segment) shown in Fig.~\ref{fig::detectorcompare}.
+We are therefore targeting 0.5~m long eTOF spectrometers which we expect to give an energy resolution of 0.25~eV at up to 100~eV electron kinetic energy above the retardation voltage, based on an estimated comparison of existing detectors (points) to the simulations (line segment) shown in Fig.~\ref{fig::detectorcompare}.
 
-\begin{wrapfigure}[16]{l}{3in}
+\begin{wrapfigure}[17]{l}{3in}
 \centerline{\includegraphics[width=\linewidth]{nphoton.2016.79.2color2pol.eps}}
 \caption{\label{fig::2color2polResults}Two-polarization, two color, pulse pair demonstration using the original CookieBox, reproduced from Ref.~\cite{Lutman2016}}
 \end{wrapfigure}
@@ -42,7 +42,7 @@ We propose therefore to shift to a 2-3~$\mu$m wavelength for the streaking laser
 The shorter wavelengths also typically improve the fractional bandwidth for a more robust carrier shape, though stable and ultrashort THz \cite{Matthias2008,MatthiasReview2011,Hauri2011} and mid infrared \cite{Sell2008,Cavalleri2010} are active research topics at SLAC and indeed will aid the retrieval of long duration shaped x-ray pulses. 
 Nevertheless, a change to short wavelength should take our initial demonstration of 500 attosecond resolution for a 10~$\mu$m, 33~fs optical cycle, angular streaking field to an expected 150 attoseconds resolution for a 3 $\mu$m field --- 11 fs optical cycle.
 Figure~\ref{fig::jamessim} shows a 4~$\mu$m wavelength simulation of two xFEL pulses that are separated by only 4~fs.
-By pushing further down to a 1~$\mu$m streaking field, we could expect to achieve temporal resoltuions competative with laser-based HHG state-of-the-art \cite{Zenghu2017,HJWorner2017}.
+By pushing further down to a 1~$\mu$m streaking field, we could expect to achieve temporal resolutions competitive with laser-based HHG state-of-the-art \cite{Zenghu2017,HJWorner2017}.
 
 \begin{wrapfigure}[16]{r}{3.5in}
 \vspace{-1.5\baselineskip}
@@ -87,6 +87,16 @@ Transferring and writing this data would require nearly 160~GBps steady-state co
 We therefore require that the analysis occur ideally directly in combination with the digitization.
 All together though, this analysis would be comparable to analyzing one $256\times256$ 10 bit deep image every microsecond.
 
+Detailed in Ref.~\cite{Nick2018}, we iteratively account for intensity in the polar representation of the angular photo-electron spectrum.
+This so called ``PacMan'' routine as well as a similar methods \cite{Thomas2015,Siqi2018,Worner2018} and certainly ``Attoclock Ptychography'' \cite{Feurer2018} are computationally expensive and are not likely to allow MHz or even 100 kHz data throughput.
+They certainly will not achieve the desired microsecond scale latency for providing sort and veto triggers.
+We therefore plan to reserve such computationally expensive methods for the generation of so-called ``ground truth'' x-ray pulse shapes for a sub-set of full fidelity raw data.
+
+We plan to use the ground truth set for training and validating a low-latency inference matrix solution that could be implemented as a series of FPGA-based on-board matrix multiplications.
+Only very small data of the retrieved pulse would be transferred to remote data recording nodes along with intermittent high fidelity shots for continually populating the validation and re-training sets.
+We will use simulations of angular streaking from expected FEL pulses, together with the detector array simulations used for the design modelling, to iterate on the detector hardware configurations and the analysis pipeline from electronics to inference output.
+We will use existing data to build a repository of example waveforms with realistic expectations for the eTOF point-spread functions.  
+
 \begin{wrapfigure}[18]{r}{3.5in}
 \vspace{-1\baselineskip}
 \centerline{
@@ -97,16 +107,6 @@ All together though, this analysis would be comparable to analyzing one $256\tim
 \caption{\label{fig::sxu_K} Soft x-ray undulator tuning range. \cite{HeinzDieter_SXU_twocolor}
 	}
 \end{wrapfigure}
-
-Detailed in Ref.~\cite{Nick2018}, we iteratively account for intensity in the polar representation of the angular photo-electron spectrum.
-This so called ``PacMan'' routine as well as a similar methods \cite{Thomas2015,Siqi2018,Worner2018} and certainly ``Attoclock Ptychography'' \cite{Feurer2018} are computationally expensive and are not likely to allow MHz or even 100 kHz data throughput.
-They certainly will not achieve the desired microsecond scale latency for providing sort and veto triggers.
-We therefore plan to reserve such computationally expensive methods for the generation of so-called ``ground truth'' x-ray pulse shapes for a sub-set of full fidelity raw data.
-
-We plan to use the ground truth set for training and validating a low-latency inference matrix solution that could be implemented as a series of FPGA-based on-board matrix multiplications.
-Only very small data of the retrieved pulse would be transferred to remote data recording nodes along with intermittent high fidelity shots for continually populating the validation and re-training sets.
-We will use simulations of angular streaking from expected FEL pulses, together with the detector array simulations used for the design modelling, to iterate on the detector hardware configurations and the analysis pipeline from electronics to inference output.
-We will use existing data to build a repository of example waveforms with realistic expectations for the eTOF point-spread functions.  
 
 The inference model will be trained based on a transfer learning paradigm whereby the central hidden layers, e.g. the simulation trained layers, will be optimized to recover x-ray pulse shapes given simulated angular streaking results.
 The next step of the model training then adds a thin surface set of layers at the input side that is connected to the raw data of the detector.

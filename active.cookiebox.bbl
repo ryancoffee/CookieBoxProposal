@@ -134,7 +134,7 @@ Wolfram Helml, Ivanka Grguraš, Pavle~N. Juranić, Stefan Düsterer, Tommaso
   Patthey, Carlo Callegari, John~T. Costello, Michael Meyer, Ryan~N. Coffee,
   Adrian~L. Cavalieri, and Reinhard Kienberger.
 \newblock Ultrashort free-electron laser x-ray pulses.
-\newblock {\em Applied Sciences}, 7(9), 2017.
+\newblock {\em Applied Sciences}, 7(9):915, 2017.
 
 \bibitem{Lutman13_twocolor}
 A.~A. Lutman, R.~Coffee, Y.~Ding, Z.~Huang, J.~Krzywinski, T.~Maxwell,
@@ -166,12 +166,26 @@ Enrico Allaria, Bruno Diviacco, Carlo Callegari, Paola Finetti, Beno\^{\i}t
   free-electron laser.
 \newblock {\em Phys. Rev. X}, 4:041040, Dec 2014.
 
+\bibitem{Ding2015}
+Y.~Ding, C.~Behrens, R.~Coffee, F.-J. Decker, P.~Emma, C.~Field, W.~Helml,
+  Z.~Huang, P.~Krejcik, J.~Krzywinski, H.~Loos, A.~Lutman, A.~Marinelli, T.~J.
+  Maxwell, and J.~Turner.
+\newblock Generating femtosecond x-ray pulses using an emittance-spoiling foil
+  in free-electron lasers.
+\newblock {\em Applied Physics Letters}, 107(19):191104, 2015.
+
 \bibitem{Marinelli2015}
 A.~Marinelli, D.~Ratner, J.~Lutman, A.A.~Turner, J.~Welch, F.-J. Decker,
   H.~Loos, C.~Behrens, S.~Gilevich, A.A. Miahnahri, S.~Vetter, T.J. Maxwell,
   Y.~Ding, R.~Coffee, S.~Wakatsuki, and Z.~Huang.
 \newblock High-intensity double-pulse x-ray free-electron laser.
 \newblock {\em Nat.~Commun.}, 6:6369, 2015.
+
+\bibitem{HeaterShaping2016}
+A.~Marinelli, R.~Coffee, S.~Vetter, P.~Hering, G.~N. West, S.~Gilevich, A.~A.
+  Lutman, S.~Li, T.~Maxwell, J.~Galayda, A.~Fry, and Z.~Huang.
+\newblock Optical shaping of x-ray free-electron lasers.
+\newblock {\em Phys. Rev. Lett.}, 116:254801, Jun 2016.
 
 \bibitem{Prince2016}
 Prince~K. C., Allaria E., Callegari C., Cucini R., De~Ninno G., Di~Mitri S.,
@@ -304,8 +318,6 @@ I.~Grguraš, A.~R. Maier, C.~Behrens, T.~Mazza, T.~J. Kelly, P.~Radcliffe,
   Costello, M.~Meyer, M.~C. Hoffmann, H.~Schlarb, and A.~L. Cavalieri.
 \newblock Ultrafast x-ray pulse characterization at free-electron lasers.
 \newblock {\em Nature Photonics}, 6:852, 2012.
-\newblock
-  https://www.nature.com/articles/nphoton.2012.276#supplementary-information.
 
 \bibitem{Helml2014}
 Helml W., A.~R. Maier, W.~Schweinberger, I.~Grgura\v{s}, P.~Radcliffe,
@@ -440,7 +452,7 @@ K.~Kl\"under, J.~M. Dahlstr\"om, M.~Gisselbrecht, T.~Fordell, M.~Swoboda,
 Tobias Schweizer, Michael~H. Br\"{u}gmann, Wolfram Helml, Nick Hartmann, Ryan
   Coffee, and Thomas Feurer.
 \newblock Attoclock ptychography.
-\newblock {\em Applied Sciences}, 8(7), 2018.
+\newblock {\em Applied Sciences}, 8(7):1039, 2018.
 
 \bibitem{VrakkingRSI}
 Marc J.~J. Vrakking.
@@ -506,37 +518,16 @@ K.~Fehre, D.~Trojanowskaja, J.~Gatzke, M.~Kunitski, F.~Trinter, S.~Zeller,
   microchannel plates for multi-coincidence detection.
 \newblock {\em Review of Scientific Instruments}, 89(4):045112, 2018.
 
-\bibitem{HeinzDieter_SXU_twocolor}
-Heinz-Dieter Nuhn.
-\newblock Lcls-ii sxr undulator line photon energy scanning.
-\newblock {\em LCLS Technical Note}, pages LCLS--TN--18--4, 2018.
-
 \bibitem{Thomas2015}
 Dirk Spangenberg, Pieter Neethling, Erich Rohwer, Michael~H. Br\"ugmann, and
   Thomas Feurer.
 \newblock Time-domain ptychography.
 \newblock {\em Phys. Rev. A}, 91:021803, Feb 2015.
 
-\bibitem{ued_rsi2015}
-S.~P. Weathersby, G.~Brown, M.~Centurion, T.~F. Chase, R.~Coffee, J.~Corbett,
-  J.~P. Eichner, J.~C. Frisch, A.~R. Fry, M.~Gühr, N.~Hartmann, C.~Hast,
-  R.~Hettel, R.~K. Jobe, E.~N. Jongewaard, J.~R. Lewandowski, R.~K. Li, A.~M.
-  Lindenberg, I.~Makasyuk, J.~E. May, D.~McCormick, M.~N. Nguyen, A.~H. Reid,
-  X.~Shen, K.~Sokolowski-Tinten, T.~Vecchione, S.~L. Vetter, J.~Wu, J.~Yang,
-  H.~A. Dürr, and X.~J. Wang.
-\newblock Mega-electron-volt ultrafast electron diffraction at slac national
-  accelerator laboratory.
-\newblock {\em Review of Scientific Instruments}, 86(7), 2015.
-
-\bibitem{Jie2016}
-Jie Yang, Markus Guehr, Theodore Vecchione, Matthew~S. Robinson, Renkai Li,
-  Nick Hartmann, Xiaozhe Shen, Ryan Coffee, Jeff Corbett, Alan Fry, Kelly
-  Gaffney, Tais Gorkhover, Carsten Hast, Keith Jobe, Igor Makasyuk, Alexander
-  Reid, Joseph Robinson, Sharon Vetter, Fenglin Wang, Stephen Weathersby,
-  Charles Yoneda, Martin Centurion, and Xijie Wang.
-\newblock Diffractive imaging of a rotational wavepacket in nitrogen molecules
-  with femtosecond megaelectronvolt electron pulses.
-\newblock {\em Nat.~Comms.}, 7:11232, 2016.
+\bibitem{HeinzDieter_SXU_twocolor}
+Heinz-Dieter Nuhn.
+\newblock Lcls-ii sxr undulator line photon energy scanning.
+\newblock {\em LCLS Technical Note}, pages LCLS--TN--18--4, 2018.
 
 \bibitem{CoffeeDAMOP11}
 APS-DAMOP.
@@ -544,10 +535,117 @@ APS-DAMOP.
   O$_2$}}, 2011.
 \newblock url = http://meeting.aps.org/Meeting/DAMOP11/Event/147727.
 
-\bibitem{Mihir}
-Mihir Mongia, David Schneider, and Ryan~N. Coffee.
-\newblock An interpretable deep learning algorithm to overcome limited hardware
-  in lcls experiments.
-\newblock {\em in prep.}
+\bibitem{Broege08}
+D.W. Broege, R.N. Coffee, and P.H. Bucksbaum.
+\newblock Strong-field impulsive alignment in the presence of high temperatures
+  and large centrifugal distortion.
+\newblock {\em Phys. Rev. A}, 78:035401, 2008.
+
+\bibitem{Cryan09}
+James~P. Cryan, Philip~H. Bucksbaum, and Ryan~N. Coffee.
+\newblock Field-free alignment in repetitively kicked nitrogen gas.
+\newblock {\em Phys.\ Rev.\ A}, 80:063412, 2009.
+
+\bibitem{Cryan10}
+{James P. Cryan, \textit{et.~al.}}
+\newblock The auger spectrum of double core-hole states in the molecular frame.
+\newblock {\em Phys.\ Rev.\ Lett.}, 105:083004, 2010.
+
+\bibitem{Advances2011}
+Philip~H. Bucksbaum, Ryan Coffee, and Nora Berrah.
+\newblock Chapter 5 - the first atomic and molecular experiments at the linac
+  coherent light source x-ray free electron laser.
+\newblock In P.R.~Berman E.~Arimondo and C.C. Lin, editors, {\em Advances in
+  Atomic, Molecular, and Optical Physics}, volume~60 of {\em Advances In
+  Atomic, Molecular, and Optical Physics}, pages 239--289. Academic Press,
+  2011.
+
+\bibitem{CryanJPB}
+J~P Cryan, J~M Glownia, J~Andreasson, A~Belkacem, N~Berrah, C~I Blaga,
+  C~Bostedt, J~Bozek, N~A Cherepkov, L~F DiMauro, L~Fang, O~Gessner, M~Gühr,
+  J~Hajdu, M~P Hertlein, M~Hoener, O~Kornilov, J~P Marangos, A~M March, B~K
+  McFarland, H~Merdji, M~Messerschmidt, V~S Petrović, C~Raman, D~Ray, D~A
+  Reis, S~K Semenov, M~Trigo, J~L White, W~White, L~Young, P~H Bucksbaum, and
+  R~N Coffee.
+\newblock Molecular frame auger electron energy spectrum from n 2.
+\newblock {\em Journal of Physics B: Atomic, Molecular and Optical Physics},
+  45(5):055601, 2012.
+
+\bibitem{Glownia10}
+{James M. Glownia, \textit{et.~al.}}
+\newblock Time-resolved pump-probe experiments at the {LCLS}.
+\newblock {\em Optics Express}, 18:17620, 2010.
+
+\bibitem{Fang10}
+L.~Fang, M.~Hoener, O.~Gessner, F.~Tarantelli, S.~T. Pratt, O.~Kornilov,
+  C.~Buth, M.~G\"uhr, E.~P. Kanter, C.~Bostedt, J.~D. Bozek, P.~H. Bucksbaum,
+  M.~Chen, R.~Coffee, J.~Cryan, M.~Glownia, E.~Kukk, S.~R. Leone, and
+  N.~Berrah.
+\newblock Double core-hole production in $n_{2}$: Beating the auger clock.
+\newblock {\em Phys. Rev. Lett.}, 105(8):083005, Aug 2010.
+
+\bibitem{Hoener10}
+M.~Hoener, L.~Fang, O.~Kornilov, O.~Gessner, S.~T. Pratt, M.~G\"uhr, E.~P.
+  Kanter, C.~Blaga, C.~Bostedt, J.~D. Bozek, P.~H. Bucksbaum, C.~Buth, M.~Chen,
+  R.~Coffee, J.~Cryan, L.~DiMauro, M.~Glownia, E.~Hosler, E.~Kukk, S.~R. Leone,
+  B.~McFarland, M.~Messerschmidt, B.~Murphy, V.~Petrovic, D.~Rolles, and
+  N.~Berrah.
+\newblock Ultraintense x-ray induced ionization, dissociation, and frustrated
+  absorption in molecular nitrogen.
+\newblock {\em Phys. Rev. Lett.}, 104(25):253002, Jun 2010.
+
+\bibitem{Frasinski2013}
+L.~J. Frasinski, V.~Zhaunerchyk, M.~Mucke, R.~J. Squibb, M.~Siano, J.~H.~D.
+  Eland, P.~Linusson, P.~v.d. Meulen, P.~Sal\'en, R.~D. Thomas, M.~Larsson,
+  L.~Foucar, J.~Ullrich, K.~Motomura, S.~Mondal, K.~Ueda, T.~Osipov, L.~Fang,
+  B.~F. Murphy, N.~Berrah, C.~Bostedt, J.~D. Bozek, S.~Schorb,
+  M.~Messerschmidt, J.~M. Glownia, J.~P. Cryan, R.~N. Coffee, O.~Takahashi,
+  S.~Wada, M.~N. Piancastelli, R.~Richter, K.~C. Prince, and R.~Feifel.
+\newblock Dynamics of hollow atom formation in intense x-ray pulses probed by
+  partial covariance mapping.
+\newblock {\em Phys. Rev. Lett.}, 111:073002, Aug 2013.
+
+\bibitem{Rudek13}
+Benedikt Rudek, Daniel Rolles, Sang-Kil Son, Lutz Foucar, Benjamin Erk, Sascha
+  Epp, Rebecca Boll, Denis Anielski, Christoph Bostedt, Sebastian Schorb, Ryan
+  Coffee, John Bozek, Sebastian Trippel, Tatiana Marchenko, Marc Simon, Lauge
+  Christensen, Sankar De, Shin-ichi Wada, Kiyoshi Ueda, Ilme Schlichting, Robin
+  Santra, Joachim Ullrich, and Artem Rudenko.
+\newblock Resonance-enhanced multiple ionization of krypton at an x-ray
+  free-electron laser.
+\newblock {\em Phys. Rev. A}, 87:023413, Feb 2013.
+
+\bibitem{Bionta11}
+Mina~R. Bionta, H.~T. Lemke, J.~P. Cryan, J.~M. Glownia, C.~Bostedt,
+  M.~Cammarata, J.-C. Castagna, Y.~Ding, D.~M. Fritz, A.~R. Fry, J.~Krzywinski,
+  M.~Messerschmidt, S.~Schorb, M.~L. Swiggers, and R.~N. Coffee.
+\newblock Spectral encoding of x-ray/optical relative delay.
+\newblock {\em Opt. Express}, 19(22):21855--21865, Oct 2011.
+
+\bibitem{Harmand13}
+M.~Harmand, R.~Coffee, M.~R. Bionta, M.~Chollet, D.~French, D.~M. Fritz,
+  H.~Lemke, N.~Medvedev, B.~Ziaja, S.~Toleikis, and M.~Cammarata.
+\newblock Achieving few-femtosecond time-sorting at hard x-ray free electron
+  lasers.
+\newblock {\em Nat. Phot.}, 7:215, 2013.
+
+\bibitem{MinaRSI}
+M.~R. Bionta, N.~Hartmann, M.~Weaver, D.~French, D.~J. Nicholson, J.~P. Cryan,
+  J.~M. Glownia, K.~Baker, C.~Bostedt, M.~Chollet, Y.~Ding, D.~M. Fritz, A.~R.
+  Fry, D.~J. Kane, J.~Krzywinski, H.~T. Lemke, M.~Messerschmidt, S.~Schorb,
+  D.~Zhu, W.~E. White, and R.~N. Coffee.
+\newblock Spectral encoding method for measuring the relative arrival time
+  between x-ray/optical pulses.
+\newblock {\em Review of Scientific Instruments}, 85(8):083116, 2014.
+
+\bibitem{Nick2014}
+{Hartmann N. and Helml W. and Galler A. and Bionta M. R. Gr\"{u}nert J. and
+  Molodtsov S. and Ferguson K. R. and Schorb S. and Swiggers M. L. and Carron
+  S. and Bostedt C. and Castagna J.-C. and Bozek J. and Glownia J. M. and Kane
+  D. J. and Fry A. R. and White W. E. and Hauri C. P. and Feurer T. and Coffee
+  R. N.}
+\newblock Sub-femtosecond precision measurement of relative x-ray arrival time
+  for free-electron lasers.
+\newblock {\em Nat. Photon.}, 8:706, 7 2014.
 
 \end{thebibliography}
