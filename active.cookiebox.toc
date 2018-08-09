@@ -12,6 +12,6 @@
 \contentsline {section}{Appendix 1: Biographical Sketch}{12}
 \contentsline {section}{Appendix 2: Current and Pending Support}{16}
 \contentsline {section}{Appendix 3: Bibliography and References Cited}{17}
-\contentsline {section}{Appendix 4: Facilities and Other Resources}{18}
-\contentsline {section}{Appendix 5: Equipment}{19}
-\contentsline {section}{Appendix 6: Data Management Plan}{20}
+\contentsline {section}{Appendix 4: Facilities and Other Resources}{24}
+\contentsline {section}{Appendix 5: Equipment}{25}
+\contentsline {section}{Appendix 6: Data Management Plan}{26}

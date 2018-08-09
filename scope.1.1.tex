@@ -1,0 +1,14 @@
+The scope of this project is the Research and Development required for the design of an electron spectrometer system that is capable of reconstructing the x-ray pulse shapes with attosecond time resolution, 0.25~eV spectral resolution, and sub-pulse polarization resolution.
+It should function as a single-shot diagnostic for multi-pulse xFEL configurations that span hundreds of eV photon energy difference.
+Motivated by the recent experimental success of Ref.~\cite{Nick2018} and further by the pulse reconstruction efforts of Refs.~\cite{Siqi2018,Feurer2018}, we target an angular array of newly designed electron Time-of-Flight spectrometers.  
+The project will deliver a design that meets specifications for each eTOF spectrometer, including mutual interaction considerations in the angular array.
+These specifications are set by the needs for reliable reconstruction of both SASE and x-ray pulse pairs of complicated polarization, multi-color spectrum, and temporal structure; more succinctly, the polarization resolving attosecond Time-Energy distribution.
+
+The project will also deliver an integrated data pipeline plan.
+We will use the simulations that result from the designing the optimised detectors to also develop in parallel the optimized analysis stream.  
+From simulations we will benchmark the retrieval algorithms of Refs.~\cite{Nick2018,Siqi2018,Feurer2018} against the new specifications of higher energy resolution over wider energy windows.
+We will match not only the electronics to the expected signals, but also the on-board pre-analysis in the overall data pipeline.
+Since we target at least 100~kfps analysis throughput, ideally with microsecond level latency, we expect the need to use high-speed machine learning inference.
+Therefore we will integrate the inferencing with the early stages of the digitization and FPGA-based signal processing.
+The output of the inference engine is expected to inform user detectors how to route buffered data, either into sorted order for histogram updates or for intelligent veto.
+

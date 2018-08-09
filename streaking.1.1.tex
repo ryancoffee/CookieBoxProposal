@@ -1,0 +1,50 @@
+
+There is increasing momentum for the development of spectro-temporally shaped x-ray FEL pulses \cite{eehg2009,Lutman13_twocolor,Marinelli13_twocolor,Allaria2014,Marinelli2015,Hemsing2016,Prince2016,Lutman2016,LutmanFreshSlice2016,Marinelli2016} in response to the rising tide of demand \cite{Cederbaum2008,Mukamel2007,Biggs2012,Mukamel2013,4WaveMixing,TIGER2015,ArtemFOA}.
+So far, the predominant method to characterize such novel temporal profiles is based on an x-band transverse accelerating cavity (XTCAV) \cite{xtcav2014} whereby the spent electron bunch is deflected horizontally, streaked in time by the phase of the transverse accelerating field.
+This technique has been a critical tool for developing the recent x-ray FEL pulse shaping methods \cite{Marinelli2015,Marinelli2016,LutmanFreshSlice2016,Lutman2016}.
+A bending magnet then deflects this time-streaked beam vertically proportional to the energy.
+Imaging the result, one records the time-energy distribution of the spent bunch, indirectly identifying the imprint of lasing on the electron bunch.
+Furthermore, barring a superconducting upgrade to the x-band cavity, the XTCAV can only run at 120 Hz, providing only intermittent information at best.
+
+\begin{figure}[b]
+%\begin{wrapfigure}[10]{r}{.65\linewidth}
+\vspace{-\baselineskip}
+\centerline{
+	\includegraphics[width=\linewidth]{naturePhoton_NickWolfi.clockfig.eps}
+}
+\vspace{-\baselineskip}
+\caption{
+	\label{streakingschematic} 
+	Schematic of angular photo-electron streaking. \cite{Nick2018}
+}
+%\end{wrapfigure}
+\end{figure}
+We seek a direct method based on the concept of photoelectron streaking, a direct interaction and one that has the capability to measure the temporal structure of x-ray pulses \cite{Hentschel2001}.
+Since its inception as a pulse reconstruction method \cite{Zenghu2005,KellerAngularStreaking} there have been great recent gains in diagnosing laser-based pulses that encroach on the soft x-ray regime \cite{Biegert2016,WornerSci2017,HJWorner2017}.
+Although some exquisite phase retrieval analyses require interference with reference oscillators \cite{Zenghu2010,Cocke2013}, we favor a simpler and more flexible scheme that can also accommodate \textit{in situ} x-ray experiments as well as the pulse retrieval diagnostic.
+We focus on the angular array of electron spectrometers that are more compatible with the x-ray regime 0.2keV and up, as used for our recend proof of concept in Ref.~\cite{Nick2018}.
+
+In x-ray photo-electron streaking, a noble gas like neon is dressed by a strong long wavelegnth infrared or THz field \cite{Review2017}.
+The streaking field shifts the outgoing photo-electron energy depending on the phase of the field at the time of photoionization.
+In the more common linear polarized streaking \cite{Adrian2012streaking,Helml2014,Juranic2014,Schulz2015,Hoffmann2018}, the intensity profile of the photo-electrons versus their shifted energies can be mapped to the time-variation of the vector potential in a familiar ``streak camera'' interpretation.
+This requires, of course, that the x-ray pulse arrives near the zero-crossing of streaking vector potential.
+There have been recent developments by the Cavalieri group to arrange two photo-electron spectrometers to sample the focal volume of the streaking field at two different places across the Gouy phase of the focus.
+This in principle relieves the need for a zero-crossing carrier field, it is particularly sensitive to the exact focussing conditions of the streaking laser.
+However, in angular streaking as depicted in Fig.~\ref{streakingschematic}, the vector potential is made to rotate as a circular polarized long-wavelength field.
+We thus intend to use the angular streaking laser field as a ``clock'' that imprints time into the electron spectra and thus allows for a time-resolved interpretation of electron emission \cite{KellerNonadiabatic2013}, leveraging our long history with photo-electron streaking at the LCLS \cite{Duesterer11,Meyer12,Adrian2012streaking,Helml2014,Hoffmann2018} to extend the attosecond angular streaking method of Refs.~\cite{CorkumAngularStreaking,KellerAngularStreaking} to the x-ray regime.
+
+\begin{wrapfigure}[22]{l}{3.5in}
+\vspace{-0.5\baselineskip}
+\centerline{\includegraphics[width=\linewidth]{naturePhoton_NickWolfi.spectrograms.eps}}
+\vspace{-0.5\baselineskip}
+\caption{\label{fig::retrievals}X-ray pulse shape retrievals reproduced from Ref.~\cite{Nick2018}.}
+\end{wrapfigure}
+As represented in Fig.~\ref{streakingschematic}, we recently repurposed what was originally considered for x-ray FEL polarimeter \cite{Markus2014,Allaria2014,Mazza2014,Lutman2016} to measure the angularly streaked photo-electron spectra with an angular array of 16 electron Time-of-Flight (eTOF) detectors as depicted in Fig.~\ref{streakingschematic} \cite{Nick2018}.
+Normally, the x-ray pulse produces undressed neon photo-electrons that distribute into a dipole probability distribution for linearly polarized x-rays, and a circular pattern for random or circular x-ray polarization with a common kinetic energy regardless of emission angle.
+When dressed with the circularly polarized laser field (Fig.~\ref{streakingschematic}) those electrons receive a momentum kick toward the instantaneous direction of the vector potential, away from center in Fig.~\ref{streakingschematic}, in a reference frame that spirals relative to the lab frame at the carrier cycle frequency.
+In this way, one detector will measure electrons with an excess of energy, the opposite detector with less energy, and the two orthogonal detectors will measure the photo-electrons as the projected vector-potential sweeps through a zero-crossing.
+The additional detectors further constrain the pulse shape retrieval shown in Fig.~\ref{fig::retrievals}.
+Depicted in Fig.~\ref{streakingschematic} and judging from the displacement of the electron emission pattern from center, x-ray shot 1 arrives when the vector potential is pointing toward 3 o'clock, shot 2 at 9 o'clock, and shot 3 at about 2 o'clock.
+The result was an x-ray pulse temporal reconstruction with 500 attoseconds resolution, limited primarily by the compromised single-shot energy resolution and conservatively long 10~$\mu$m wavelength for the streaking field. 
+Given that the array of eTOFs was originally used at LCLS as a polarization diagnostic, we target here a full spectral and polarization reconstruction with 150 attosecond temporal resolution and 0.25 eV energy resolution.
+
