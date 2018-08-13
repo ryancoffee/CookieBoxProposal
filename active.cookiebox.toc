@@ -1,6 +1,6 @@
 \contentsline {section}{Introduction}{1}
 \contentsline {subsection}{Angular streaking}{2}
-\contentsline {subsection}{Attosecond pump-probe}{3}
+\contentsline {subsection}{Attosecond pump-probe}{4}
 \contentsline {section}{Objectives}{5}
 \contentsline {subsection}{Optimized Detector Array}{5}
 \contentsline {subsection}{Real time analysis}{7}
@@ -8,7 +8,6 @@
 \contentsline {subsection}{Scope}{8}
 \contentsline {subsection}{Schedule}{9}
 \contentsline {paragraph}{Responsibilities of key project personnel}{10}
-\contentsline {paragraph}{Expected publications}{11}
 \contentsline {section}{Appendix 1: Biographical Sketch}{12}
 \contentsline {section}{Appendix 2: Current and Pending Support}{16}
 \contentsline {section}{Appendix 3: Bibliography and References Cited}{17}

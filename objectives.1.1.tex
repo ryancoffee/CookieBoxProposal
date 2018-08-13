@@ -14,15 +14,16 @@ The technical requirements that enable pulse retrievals for accurate reconstruct
 Pulse-to-pulse variations at an FEL require single-shot measurements much like the velocity map imaging (VMI) \cite{VrakkingRSI} extension of attosecond angular streaking \cite{attoclockVMI2013}.
 Although we have explored such a single-shot VMI solution for 120~Hz operation \cite{Siqi2018}, its requirement of a two-dimensional area detector precludes its use for the high repetition rates expected. 
 Furthermore, the single resolution window of the VMI precludes its use for the kinds of novel multi-color pulses we have come to expect from LCLS \cite{Lutman13_twocolor,Marinelli13_twocolor,Marinelli2015,Lutman2016,LutmanFreshSlice2016}.
-We are therefore designing toward a single-shot diagnostic that reports the full temporal intensity, wavelength, and polarization distribution also with attosecond scale resolution and at the highest repetition rates up to 1~MHz.  
+We are therefore designing toward a single-shot diagnostic that reports the full temporal intensity, wavelength, and polarization distribution with attosecond scale resolution and at the highest repetition rates up to 1~MHz.  
 We further require a two-fold over sampling in the angular dimension in order to fully characterize even multi-pulses (Fig.~\ref{fig::2color2polResults}) \cite{Lutman2016,LutmanFreshSlice2016}.
-Modeled after the original so called ``Cookie Box'' design of Jens Viefhaus, we propose a main chamber that accepts micro-channel plate based electron detectors in a 16-fold symmetric angular array.
+%Modeled after the original so called ``Cookie Box'' design of Jens Viefhaus, 
+We propose a main chamber that accepts micro-channel plate based electron detectors in a 16-fold symmetric angular array.
 
-Preliminary results of Ref.~\cite{Nick2018} were based on 1~eV eTOF spectrometer resolution when working in the required single-shot current mode (Viefhaus points in Fig.~\ref{fig::detectorcompare}.
+Preliminary results of Ref.~\cite{Nick2018} were based on 1~eV eTOF spectrometer resolution when working in the required single-shot current mode in Fig.~\ref{fig::detectorcompare} (Viefhaus points).
 We note that used in counting mode as at a synchrotron, higher resolution can be achieved by electron event edge detection, but the FEL use case requires a direct spectral readout with the MCP electronics run in ``current'' mode with the voltage waveform being digitized as a single shot spectrum.
-This sets the resolution not by how well one can locate the center of the impulse response waveform, but rather the actual width of that impulse response waveform.
+This sets the resolution not by how well one can locate the center of electron signal, but rather the actual width of the single electron response waveform.
 This motivates us to design for the sharpest achievable response from the MCP assembly and that we digitize that waveform with appropriately high sampling over a sufficiently long temporal span.
-The current target of 400~ps FWHM for the MCP response then pushes us to design for at least 5~GSps digitizer sampling over at least a 200~ns long window.
+The current target of 400~ps FWHM for the MCP response then pushes us to design for at least 5~GSps digitizer sampling at least a 300~ns long window for a 5--100~eV spectral range in a 0.5~m spectrometer.
 
 Although the final decision on retrieval algorithm is a subject of active research, we use so called ``Attoclock Ptychography'' \cite{Feurer2018} to inform our specifications for spectral and angular resolution.
 From Fig.~\ref{fig::thomasfigs}(upper) we can see that the energy resolution for the streaked photoelectrons should ideally be in the sub~0.25\% range.
@@ -77,8 +78,9 @@ We plan for tests of such a novel mode by demonstrating interleaved retardations
 
 Given the MHz scale repetition rate of Table~\ref{lcls2specs} for LCLS-II, a measure-and-sort method that required every XFEL shot be recorded would increase the data load from the 10 TB/day of today to 100 PB/day.
 Such a load would require an enormous cost for developing the ultra-high duty-cycle area detectors and the corresponding network and storage infrastructure. 
-If instead one could use real-time information about the x-ray pulse shape, then one could veto events where the pulse characteristics were not amenable to the physics being measured.
-Furthermore, one could allow for on-board histogram updates in a memory buffer that could collate the real-time sorted results prior to network transfer.
+We therefore propose to develop a machine learning approach to target a streaming, high throughput and low latency data analysis pipeline.
+This would enable the use of real-time information about the x-ray pulse shape to veto events where the pulse characteristics were not amenable to the physics being measured.
+Alternatively, one could use the pulse shape analysis to sort and collate results from down-stream detectors, updating buffered histograms prior to network transfer of the sorted and averaged results.
 Such a vision fuels our strong motivation to not only provide high repetition rate veto, but also event rate, low-latency sorting triggers.
 
 The on-board analysis of the data is a challenging bottleneck in the angular streaking scheme.

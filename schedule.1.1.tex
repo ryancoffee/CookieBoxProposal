@@ -2,7 +2,6 @@
 %\caption{\label{tab::schedule} Timeline of the R\&D schedule. Project Years (PY) are sub-divided into 6 month blocks. }
 \small
 \begin{tabular}{l|l|l|l}
-\hline
 \multicolumn{2}{c|}{Project Year 1} &  \multicolumn{2}{c}{Project Year 2} \\
 \hline
 eTOF spectrometer design & Simulate final design & Test inital MCPs & Test Final system\\
@@ -21,7 +20,7 @@ Develop algorithms& Train ML on sims & Transfer Learning & Benchmark latency\\
 \vspace{-.75\baselineskip}
 \centerline{\includegraphics[width=\linewidth]{MRCOFFEE-2-180809.eps}}
 \vspace{-.25\baselineskip}
-\caption{\label{fig::mrcoffee} Initial design sketch of the proposed 16-fold symmetric vacuum chamber. Image courtesy Jean-Charles Castagna and Michael Holms.}
+\caption{\label{fig::mrcoffee} Initial design sketch of the proposed 16-fold symmetric vacuum chamber. Image courtesy Jean-Charles Castagna and Michael Holmes.}
 \end{wrapfigure}
 \paragraph*{Project Year 1}
 In the beginning of Project Year 1, two prototype detector electronics, the MCP assemblies, will be ordered.
@@ -31,7 +30,7 @@ These digitizers will be chosen based on the simulated waveforms and the measure
 The signal testing will also provide further insight into the actual signal processing that will be needed in the final build out.  
 The vacuum chamber chamber represented by the preliminary sketch shown in Fig.~\ref{fig::mrcoffee} will be optimized with a final design readied for purchasing. 
 The detectors will be installed into the vacuum chamber.
-Since fringe electric fields may compromise the final electron energy resolution, along with stray magnetic fields, we must test the prototype detector pair for cross-talk and ringing in the final chamber environment.  
+Since fringe electric and magnetic fields may compromise the final electron energy resolution, we must test the prototype detector pair for cross-talk and ringing in the final chamber environment.  
 \begin{itemize}
 \item Test 2$\mu$m streaking with attosecond pulses from \\LCLS-I using Axial VMI \cite{Siqi2018}.
 \item Design detectors for array, use existing data to develop algorithms for streaming analysis.
@@ -52,34 +51,40 @@ By August of 2020, we expect the system would be ready for full deployment, just
 \begin{itemize}
 \item Implement on-board FPGA processing and demonstrate calibration learning.
 \item Optimize FPGA usage and benchmark SoC solution compared to larger ML-server solution.
-\item Construct detector array prototype for Building 40 benchmarks and LCLS-II beneficial occupancy.
+\item Construct detector array prototype for benchmarking on the PULSE Institute euv laser system.
 \item Install array on LCLS-II and benchmark resolution with XAFS using 3 $\mu$m laser dressing of N$_2$O.
 \end{itemize}
 
 \paragraph*{Responsibilities of key project personnel}\addcontentsline{toc}{paragraph}{Responsibilities of key project personnel}
-The PI will be responsible for leading the design effort to ensure a fundamentally integrated system, from chamber design and detector hardware to signal readout and waveform analysis.
-He will also be principally concerned with the pulse reconstruction algorithm, inference engine, and data analysis pipeline.
 
-Co-investigator Peter Walter is a Staff Scientist in LCLS Science Research and Development and will principally lead the detector simulations and construction.
-Peter will also primarily lead the installation for early testing of the final concepts.
-Co-investigator James Cryan is a Staff Scientist in LCLS Science Research and Development and PULSE and he will host much of the detector euv-based commissioning in his lab.
-James will also continue to lead the VMI-based approach as well as many of the experimental simulations.
-Both James and Peter will have regular interactions with both the PI and the RA to help inform and guide the work.
-
-The Research Associate (RA) will spend 100\% of his or her time over the 2-year proposal period.  
+The Research Associate (RA) is the only person who will be funded at the 100\% level for the duration of the 2-year proposal period.  
 In Year 1, he or she will use existing computational infrastructure to simulate the electron Time-of-Flight detector array, iterating the design in order to minimize the cross-talk between eTOF spectrometers in the array.  
 Furthermore, he or she will identify and order the electron multiplier assemblies and digitizer electronics that work together to optimize energy resolution and spectral window.  
 Upon receipt, the RA will complete the initial 2 prototype eTOF detectors and begin the test/iterate cycle.
 In Year 2, the RA will focus on completing construction of the prototype detector arrays and use existing laser facilities to demonstrate the new capabilities.  
 He or she will work with the LCLS Staff to secure time during early testing of the new soft x-ray undulators to demonstrate the improved window and resolution capabilities.
 
-In addition to the budgeted RA, the PI has identified a Banting post-doctoral fellow, Audrey Therrien, who has needed expertise in charged particle simulations with GEANT4 as well as integrated circuit design and FPGA expertise.
-The PI has also identified a Stanford graduate research fellow in Electrical Engineering, Matt Feldman, who holds expertise in digital signal processing in FPGA as well as deploying machine learning models (inference engines) to FPGA.
+The PI's effort for this project will be funded through LCLS Science Research and Development (SRD) operations budget.  
+He will be responsible for leading the design effort to ensure a fundamentally integrated system, from chamber design and detector hardware to signal readout and waveform analysis.
+He will also leverage his LDRD funded project ``Machine Learning for Data Reduction at LCLS-II: a path toward 1 MHz detection'' for developing the pulse reconstruction algorithm, inference engine, and data analysis pipeline.
 
-The PI will continue to leverage his group alumni fellows, most notably Wofram Helml (Univ.~Dortmund), Anton Lidahl (Quamcom Inc.), and Markus Ilchen (Euro XFEL/Univ.~Kassel) who, along with then graduate student Nick Hartmann (Coherent Inc.), formed the original attosecond angular streaking team within the PI's research group.
+Co-investigator Peter Walter will also be funded through the LCLS SRD operations budget as well as the L2SI project as a Staff Scientist and will principally lead the detector simulations and construction.
+Peter will also primarily lead the installation for early testing of the final concepts.
+
+Co-investigator James Cryan will be funded through the LCLS SRD operations and additionally through the PULSE Institute FWP.
+He will host much of the detector euv-based commissioning in his lab.
+James will also continue to lead the VMI-based approach as well as many of the experimental simulations.
+Both James and Peter will have regular interactions with both the PI and the RA to help inform and guide the work.
+
+The PI will leverage a Banting post-doctoral fellow, Audrey Therrien, for her expertise in charged particle simulations with GEANT4 as well as integrated circuit design and FPGA expertise.
+
+The PI will also leverage a Stanford graduate research fellow in Electrical Engineering, Matt Feldman, for his expertise in digital signal processing in FPGA as well as deploying machine learning models (inference engines) to FPGA.
+
+The PI will continue to leverage his group alumni fellows, most notably Wofram Helml (Univ.~Dortmund), Anton Lidahl (Qamcom Inc.), and Markus Ilchen (Euro XFEL/Univ.~Kassel) who, along with then graduate student Nick Hartmann (Coherent Inc.), formed the original attosecond angular streaking team within the PI's research group.
 The PI expects these collaborative relationships to continue, having grown to include also a long standing collaboration with Andreas Galler who is currently organizing the EuroXFEL angular streaking effort as well as with Reinhard Keinberger of TU Munich/MPQ Garching Germany who is a familiar name in attosecond laser science.
 Furthermore, the ongoing close relationship with Thomas Feurer of University of Bern Switzerland will ensure continued development of the attosecond angular streaking retrieval algorithms.
 
+\begin{comment}
 \paragraph{Expected publications}
 \begin{itemize}
 \item``Attoclock Ptychography'' -- Tobias Schweizer \textit{et al.} \cite{Feurer2018},
@@ -89,3 +94,4 @@ Furthermore, the ongoing close relationship with Thomas Feurer of University of 
 \item ``Shaped attosecond x-ray FEL pulses for nonlinear x-ray science,''
 \item ``Direct observation of laser-mixing of valence electronic symmetries.''
 \end{itemize}
+\end{comment}
