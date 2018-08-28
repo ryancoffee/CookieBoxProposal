@@ -1,0 +1,8 @@
+Multi-color, multi-polarization and multiple x-ray pulses with attosecond scale temporal control ensures that the next generation Linac-Coherent Light Source II (LCLS-II) will maintain its international leadership by moving us from molecular movies to movies of the electrons themselves.
+To realize this, we require a single shot diagnostic for on-the-fly x-ray pulse shape reconstruction as we recently demonstrated with the method of ``angular streaking.''
+A long-wavelength laser provides a ``clock'' against which attosecond electron dynamics can be measured. 
+The scope of this proposed project is the Research and Development required to develop an x-ray Free Electron Laser optimized angular array of electron spectrometers that will meet the stringent needs for angular streaking at LCLS-II. 
+We target a significant improvement in resolution that also accommodates two-color double pulses of widely detuned energies as well as multiple polarizations.
+Furthermore, leveraging existing funding and connections to Silicon Valley industry partners, we will also design toward an on-board streaming data analysis that is specifically matched to the LCLS-II data pipeline. 
+This project will not only provide the design basis for attosecond resolving single-shot x-ray pulse reconstruction but also an advanced instrumentation concept to serve as a platform for core and future LCLS-II science.
+

@@ -1,7 +1,6 @@
 FWP*
 *.aux
 *.log
-*.txt
 refs_quotes/*
 refs_quotes/*
 package/*
